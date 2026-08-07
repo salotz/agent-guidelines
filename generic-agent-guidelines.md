@@ -18,7 +18,7 @@ When working on projects agents should obey [salotz RFC 22](https://github.com/s
 
 ### Host System Interaction
 
-When interacting with host local context agents should obey [salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context).
+When interacting with host local context agents should obey [salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context) for loading operator defined context and [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) for agent generated content.
 
 
 ### Remote Resource Caching
@@ -27,7 +27,7 @@ When agents refere to external resources like repositories as part of context lo
 
 Inspired from [this skill](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/librarian).
 
-Should obey other guidelines for where to place locally cached data on the host machine.
+Should obey other guidelines for [host system interation](#host-system-interaction).
 
 ### Compacted Inlining
 
@@ -47,4 +47,4 @@ This prevents unnecessary privelege escalation as a generic shell tool can do an
 
 For example if agents want to only read a particular file they should use a specific "read" tool or agent harness extension over `cat myfile.txt`.
 
-Coding agents should also provide useful help and guidance to their controller if they are utilizing broader capability tools like shell when they could use more constrained tools. For example if the user has not installed the necessary tools for an agent to follow this behavior (e.g. a `read-file` tool or extension) the agent should make this known to the user and suggest solutions to installing more fine-grained tools.
+Coding agents should also provide useful help and guidance to their controller if they are utilizing broader capability tools like shell when they could use more constrained tools. For example if the operator has not installed the necessary tools for an agent to follow this behavior (e.g. a `read-file` tool or extension) the agent should make this known to the operator and suggest solutions to installing more fine-grained tools.

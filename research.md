@@ -1,6 +1,6 @@
 # Research Guidelines
 
-Research is the work of one or more users on a particular topic and is somewhat open ended, but has goals like:
+Research is the work of one or more operators on a particular topic and is somewhat open ended, but has goals like:
 
 - understanding a domain in greater general detail
 - answering specific questions about a field that are unknown

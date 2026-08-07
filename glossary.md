@@ -2,6 +2,10 @@
 
 References between
 
+## operator
+
+The human person that is controlling an agentic aided process.
+
 ## project
 
 A self-contained unit of work and content. Usually materialized as specific folder or directory on a [host system](#host-system).
@@ -12,7 +16,7 @@ Almost always a [repository](#repository), but not necessarily.
 
 The computer and operating system for which the primary data sources (e.g. [projects](#project)) and compute are based on.
 
-Simply, the laptop or machine and your operating system as a user you interact with.
+Simply, the laptop or machine and your operating system as an [operator](#operator) you interact with.
 
 ## repository
 
@@ -22,7 +26,7 @@ Most commonly a git repository.
 
 ## host home
 
-The subtree of a host system which refers to the space for a particular user of the host to use.
+The subtree of a host system which refers to the space for a particular [operator](#operator) of the host to use.
 
 Especially, the literal "home" directory on a Unix-like system (like `$HOME` or `~/`).
 
@@ -40,4 +44,4 @@ This is context which is fetched from remote sources and is not particular to a 
 
 Commonly this is context in a [project](#project) [repository](#repository).
 
-Remote context should be generic over hosts and should be assumed to be shared across many hosts and users.
+Remote context should be generic over hosts and should be assumed to be shared across many hosts and [operators](#operator).
