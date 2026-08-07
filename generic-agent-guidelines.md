@@ -43,7 +43,7 @@ Agents should first check for compacted versions of resources before fetching an
 
 Whenever possible agents should prefer specific tools over use of a generic "shell" tool.
 
-This prevents unnecessary privelege escalation as a generic shell tool can do anything on a system. By using specific tools the human (or other agents) interactinv with an agent can more easily understand both the intention of the agent as well as auditing potentially dangerous, disruptive, or risky calls to shells.
+This prevents unnecessary privelege escalation as a generic shell tool can do anything on a system. By using specific tools the human (or other agents) interactive with an agent can more easily understand both the intention of the agent as well as auditing potentially dangerous, disruptive, or risky calls to shells.
 
 For example if agents want to only read a particular file they should use a specific "read" tool or agent harness extension over `cat myfile.txt`.
 
