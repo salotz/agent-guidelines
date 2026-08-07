@@ -4,7 +4,7 @@ Generic advice for any agent-assisted work.
 
 ### RFC and Standard References
 
-This repo is focused on specifically guidelines that do not have a practical means for more strict standardization.
+This repo is focused specifically on guidelines that do not have a practical means for more strict standardization.
 
 Guidelines here however should make use of such standards through reference and compacted "inlining".
 
@@ -23,11 +23,11 @@ When interacting with host local context agents should obey [salotz RFC 23](http
 
 ### Remote Resource Caching
 
-When agents refere to external resources like repositories as part of context loading they should prefer making locally cached copies of them.
+When agents refer to external resources like repositories as part of context loading they should prefer making locally cached copies of them.
 
 Inspired from [this skill](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/librarian).
 
-Should obey other guidelines for [host system interation](#host-system-interaction).
+Should obey other guidelines for [host system interaction](#host-system-interaction).
 
 ### Compacted Inlining
 
@@ -35,7 +35,7 @@ When writing guidelines (such as these documents) if reference is made to an ext
 
 For instance if you refer to and request adherence to a particular style guide you should provide a compacted summary of that style guide for immediate loading to context.
 
-Agents should first check for compacted versions of resources before fetching and reading the larger ones. If additionaly context is needed for specifics from larger standards this can be done incrementally and ideally in sub-agents.
+Agents should first check for compacted versions of resources before fetching and reading the larger ones. If additionally context is needed for specifics from larger standards this can be done incrementally and ideally in sub-agents.
 
 ### Tool Preference
 
@@ -43,7 +43,7 @@ Agents should first check for compacted versions of resources before fetching an
 
 Whenever possible agents should prefer specific tools over use of a generic "shell" tool.
 
-This prevents unnecessary privelege escalation as a generic shell tool can do anything on a system. By using specific tools the human (or other agents) interactive with an agent can more easily understand both the intention of the agent as well as auditing potentially dangerous, disruptive, or risky calls to shells.
+This prevents unnecessary privilege escalation as a generic shell tool can do anything on a system. By using specific tools the human (or other agents) interacting with an agent can more easily understand both the intention of the agent as well as auditing potentially dangerous, disruptive, or risky calls to shells.
 
 For example if agents want to only read a particular file they should use a specific "read" tool or agent harness extension over `cat myfile.txt`.
 

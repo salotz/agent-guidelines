@@ -1,6 +1,6 @@
 # Glossary
 
-References between
+This glossary defines key terms and provides cross-references between them.
 
 ## operator
 
@@ -30,7 +30,7 @@ The subtree of a host system which refers to the space for a particular [operato
 
 Especially, the literal "home" directory on a Unix-like system (like `$HOME` or `~/`).
 
-Distinguised from the system managed directories on your host (i.e. `/` in Unix-likes).
+Distinguished from the system managed directories on your host (i.e. `/` in Unix-likes).
 
 ## host local context
 
