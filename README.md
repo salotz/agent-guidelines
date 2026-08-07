@@ -16,3 +16,6 @@ Guidelines are categorized by these top-level groups:
 - [Software](./software-guidelines.md): Guidelines specific to the authorship and maintenance of software projects.
 - [Technical Writing](./technical-writing.md): Guidelines for technical writing meant for a non-personal audience.
 - [Research](./research.md): Guidelines for research.
+
+
+There is a file [agents_md_template.md](./agents_md_template.md) which provides some context you can drop into your `AGENTS.md` file to have it reference these guidelines.
