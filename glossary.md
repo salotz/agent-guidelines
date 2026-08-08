@@ -45,3 +45,11 @@ This is context which is fetched from remote sources and is not particular to a 
 Commonly this is context in a [project](#project) [repository](#repository).
 
 Remote context should be generic over hosts and should be assumed to be shared across many hosts and [operators](#operator).
+
+## Integration Environment
+
+A computational environment which provides all systems put together to mimic a production environment.
+
+## Integration Tests
+
+Tests that run in an integration environment.
