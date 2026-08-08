@@ -8,24 +8,24 @@ This repo is focused specifically on guidelines that do not have a practical mea
 
 Guidelines here however should make use of such standards through reference and compacted "inlining".
 
-Sources of standards can be official standards bodies like the [Agentic AI Foundation (AAIF)](https://aaif.io/), community or organizational standards (e.g. [Google Style Guides](https://google.github.io/styleguide/)), or personal standards (e.g. [salotz RFCs](https://github.com/salotz/rfcs)).
+Sources of standards can be official standards bodies like the [Agentic AI Foundation (AAIF)](https://aaif.io/) ([summary](./summaries/aaif.md)), community or organizational standards (e.g. [Google Style Guides](https://google.github.io/styleguide/) ([summary](./summaries/google-style-guides.md))), or personal standards (e.g. [salotz RFCs](https://github.com/salotz/rfcs) ([summary](./summaries/salotz-rfcs-overview.md))).
 
 Recommendations in this repo should explicitly reference these standards with extensions or modifications.
 
 ### Project Layout
 
-When working on projects agents should obey [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure).
+When working on projects agents should obey [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure) ([summary](./summaries/salotz-rfc-022-ai-coding-structure.md)).
 
 ### Host System Interaction
 
-When interacting with host local context agents should obey [salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context) for loading operator defined context and [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) for agent generated content.
+When interacting with host local context agents should obey [salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context) ([summary](./summaries/salotz-rfc-023-local-agent-context.md)) for loading operator defined context and [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)) for agent generated content.
 
 
 ### Remote Resource Caching
 
 When agents refer to external resources like repositories as part of context loading they should prefer making locally cached copies of them.
 
-Inspired from [this skill](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/librarian).
+Inspired from [this skill](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/librarian) ([summary](./summaries/librarian-skill-mitsuhiko.md)).
 
 Should obey other guidelines for [host system interaction](#host-system-interaction).
 
@@ -48,3 +48,8 @@ This prevents unnecessary privilege escalation as a generic shell tool can do an
 For example if agents want to only read a particular file they should use a specific "read" tool or agent harness extension over `cat myfile.txt`.
 
 Coding agents should also provide useful help and guidance to their controller if they are utilizing broader capability tools like shell when they could use more constrained tools. For example if the operator has not installed the necessary tools for an agent to follow this behavior (e.g. a `read-file` tool or extension) the agent should make this known to the operator and suggest solutions to installing more fine-grained tools.
+
+### Naming Things
+
+When naming things (esp. files, folders, etc.) follow [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)).
+

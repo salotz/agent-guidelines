@@ -19,3 +19,5 @@ Guidelines are categorized by these top-level groups:
 
 
 There is a file [agents_md_template.md](./agents_md_template.md) which provides some context you can drop into your `AGENTS.md` file to have it reference these guidelines.
+
+The [summaries](./summaries) folder contains compacted summaries of externally referenced resources.
