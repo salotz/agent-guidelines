@@ -53,3 +53,8 @@ Coding agents should also provide useful help and guidance to their controller i
 
 When naming things (esp. files, folders, etc.) follow [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)).
 
+### Reading the web
+
+When possible find a non html source to read on the web, as it is much more context efficient.
+
+This includes the markdown sources for a website (e.g. in github) or using the [llms.txt](https://llmstxt.org/) ([summary](./summaries/llms-txt-standard.md)) standard when available.
