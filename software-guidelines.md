@@ -8,7 +8,7 @@ Requirements for generic coding tasks.
 
 ### Code Tags
 
-Follow [salotz RFC 6](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context) ([summary](./summaries/salotz-rfc-023-local-agent-context.md)) when writing comments in source code.
+Follow [salotz RFC 6](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags) ([summary](./summaries/salotz-rfc-006-codetags.md)) when writing comments in source code.
 
 ### Git Commit Messages
 
@@ -37,7 +37,7 @@ The operator may delegate test writing to agents after defining the specifics of
 
 Agents should let the operator know that you need tests to progress in your work, rather than attempting the work without them.
 
-Code should be written with an emphasis on testability of components, with good factoring to allow for fine grained units tests.
+Code should be written with an emphasis on testability of components, with good factoring to allow for fine-grained unit tests.
 
 ### Test Organization
 
@@ -54,7 +54,7 @@ They are:
 - regression: Tests maintained to protect against previously regressive behavior.
 - preflight: Tests which run during integration system set up. For instance server readiness.
 - integration: Tests of a system against a realistic test environment (the "integration system") without mocked I/O
-- acceptance: Tests systems for specific correctness behavior. For instance canonicalization algorithms work when round-tripping to an server.
+- acceptance: Tests systems for specific correctness behavior. For instance canonicalization algorithms work when round-tripping to a server.
 
 Only unit tests and functional tests can be colocated with code, the rest should live in separate testing directories.
 
@@ -72,7 +72,7 @@ Unit test requirements are:
 - should not utilize any outside or parallel managed service, such as a local web server or database.
 - should be able to all run in parallel in a reasonably short amount of time.
 - should not use any resources not also part of the repository.
-  - Staging of input data is an acceptable pre-requisite for unit tests however, but clear instructions for obtaining the data and tagging tests with this requirement is required.
+  - Staging of input data is an acceptable pre-requisite for unit tests; however, clear instructions for obtaining the data and tagging tests with this requirement are required.
 
 Unit tests should be written such that there is a one-to-one mapping between a function and the test.
 
@@ -129,7 +129,7 @@ The unit test would test whether the behavior of the code is correct e.g.:
 - Does it return an area unit value?
 - Does it raise the expected errors?
 
-In this case the are produced is an estimate and you may have separate
+In this case the area produced is an estimate and you may have separate
 requirements on the accuracy of the answer. The unit test should not
 test this, the functional test should.
 
@@ -187,7 +187,7 @@ Regression tests directory is called `regressions`.
 
 Integration tests are a class of tests which require an integration system.
 
-Instantiations of the integration system is in different integration environments. Each environment may have different properties you want to test.
+Instantiations of the integration system are in different integration environments. Each environment may have different properties you want to test.
 
 For example you may want to test against multiple database backends in different environments.
 
@@ -237,7 +237,7 @@ Preflight tests directory is called `preflight`.
 
 Preflight tests are used to check if the integration system is ready for real testing or load.
 
-Preflight tests run during set up of the integration environment and may have different sets of tests run at different phaes of system bring-up.
+Preflight tests run during set up of the integration environment and may have different sets of tests run at different phases of system bring-up.
 
 Preflight tests are also typically run when setting up production environments.
 
@@ -249,7 +249,7 @@ Within each unit test there is a goal of 100% branch coverage.
 
 However, in some languages (like Python) this is not practical because of highly dynamic nature. In practice then other strategies for cutting down on valid function behaviors should be used like type annotations, type checking, and property testing (like Hypothesis).
 
-Unit tests for projects using these add-on methods should focus then on only the possible behaviors given the guarantees those system provide.
+Unit tests for projects using these add-on methods should focus then on only the possible behaviors given the guarantees those systems provide.
 
 For instance if you have a generic function:
 
@@ -271,8 +271,8 @@ And only test the specific input and output types provided.
 
 If possible you should write test system utilities that report the current unit coverage to be used in QA.
 
-In Python, for example, is [pytest-checklist](https://github.com/examol-corp/pytest-checklist). Other solutions are acceptable.
+In Python, for example, [pytest-checklist](https://github.com/examol-corp/pytest-checklist) is one such tool. Other solutions are acceptable.
 
-Branch coverage tools like [coverage](https://coverage.readthedocs.io/en/7.15.4/) can be used as a quality metric but should not be used as a gating mechanism for acceptance.
+Branch coverage tools like [coverage](https://coverage.readthedocs.io/en/latest/) can be used as a quality metric but should not be used as a gating mechanism for acceptance.
 
 If 100% unit coverage is maintained then minimal integration tests are needed.

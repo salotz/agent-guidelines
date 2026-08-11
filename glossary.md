@@ -53,3 +53,7 @@ A computational environment which provides all systems put together to mimic a p
 ## Integration Tests
 
 Tests that run in an integration environment.
+
+## codetag
+
+A specially formatted comment tag (e.g. TODO, FIXME) placed in source code to add machine-searchable semantic meaning beyond freeform comments. Defined by [salotz RFC 6](./summaries/salotz-rfc-006-codetags.md).

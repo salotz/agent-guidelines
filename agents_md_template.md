@@ -1,6 +1,6 @@
 # Agent Guidelines
 
-This project follows the guidelines at https://github.com/salotz/agent-guidelines.
+This project follows the guidelines at https://github.com/salotz/agent-guidelines, from which this section was directly copied.
 
 - Read generic-agent-guidelines.md (or equivalent) for agent-assisted work.
 - Prefer task-specific tools over shell.

@@ -17,7 +17,8 @@ Guidelines are categorized by these top-level groups:
 - [Technical Writing](./technical-writing.md): Guidelines for technical writing meant for a non-personal audience.
 - [Research](./research.md): Guidelines for research.
 
+## Getting Started
 
-There is a file [agents_md_template.md](./agents_md_template.md) which provides some context you can drop into your `AGENTS.md` file to have it reference these guidelines.
+The [Getting Started](./getting-started.md) document provides context for an agent to initialize a project with these guidelines.
 
-The [summaries](./summaries) folder contains compacted summaries of externally referenced resources.
+
