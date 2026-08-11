@@ -19,6 +19,12 @@ workflows to run when maintaining this repository.
 The file [shared/agents_md_template.md](./shared/agents_md_template.md)
 is a pre-generated context to put into your projects.
 
+The file [personal/agents_md_template.md](./personal/agents_md_template.md)
+is a pre-generated context to put into host-local agent config
+(`~/.agents/AGENTS.md`). Agent harnesses may need a separate pointer
+(e.g. goose: `~/.config/goose/AGENTS.md`). See
+[personal/getting-started.md](./personal/getting-started.md).
+
 The [shared/summaries](./shared/summaries) folder contains compacted
 summaries of externally referenced resources. Check here before reading
 the referenced resource.

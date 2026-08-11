@@ -10,6 +10,10 @@ on this operator's hosts or when personal context is explicitly in scope.
 
 ## Contents
 
+- [Getting Started](./getting-started.md): install personal context on a
+  host (`~/.agents/AGENTS.md`) and point agent harnesses at it.
+- [agents_md_template.md](./agents_md_template.md): drop-in bootloader for
+  host-local agent context (`~/.agents/AGENTS.md`).
 - [Shell Configuration and Bimker](./shell-and-bimker.md): bimhaw-managed
   shell config and the `~/.bimker` host configuration repo.
 - [skills/](./skills/): personal agent skills (e.g. remote repo cacher).

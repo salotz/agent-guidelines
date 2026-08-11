@@ -14,8 +14,9 @@ Use this git commit message advice in this [post](https://chris.beams.io/git-com
 
 Summaries live in [shared/summaries](../shared/summaries).
 
-## Drop-In AGENTS.md Template
+## Drop-In Templates
 
-There is an [AGENTS.md template](../shared/agents_md_template.md) that should be kept up to date which you can drop into a project's `AGENTS.md` that will then follow this repository's guidelines.
+- Project bootloader: [shared/agents_md_template.md](../shared/agents_md_template.md) — drop into a project's `AGENTS.md`.
+- Host bootloader: [personal/agents_md_template.md](../personal/agents_md_template.md) — drop into host-local context (`~/.agents/AGENTS.md`); configure harness pointers as in [personal/getting-started.md](../personal/getting-started.md).
 
-As part of this process go and update it if necessary.
+Keep both up to date when guidelines change.

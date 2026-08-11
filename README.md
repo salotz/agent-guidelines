@@ -31,8 +31,11 @@ documents.
 
 ## Getting Started
 
-The [Getting Started](./shared/getting-started.md) document provides
-context for an agent to initialize a project with these guidelines.
+- Projects: [shared/getting-started.md](./shared/getting-started.md)
+  (drop-in project `AGENTS.md`).
+- Hosts (personal): [personal/getting-started.md](./personal/getting-started.md)
+  (drop-in `~/.agents/AGENTS.md`, plus harness pointers such as
+  `~/.config/goose/AGENTS.md` for goose).
 
 ## Maintaining this repo
 
