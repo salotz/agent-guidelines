@@ -16,10 +16,43 @@ Recommendations in this repo should explicitly reference these standards with ex
 
 When working on projects agents should obey [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure) ([summary](./summaries/salotz-rfc-022-ai-coding-structure.md)).
 
+### Project Tooling
+
+Most projects require at least some host-installed tools. Agents can help install these tools but they must obey host rules (see [Host System Interaction](#host-system-interaction)).
+
+Before agents aid in installing these tools they should request confirmation from the operator. Agents should also outline the installation and integration requirements.
+
+For example many tools require not only installation of executables but also adding to shell configuration or basic configuration of cache and data storage directories. Agents should create a plan for addressing these integrations.
+
+For specific guidelines on system integration use guidelines from [Host System Interaction](#host-system-interaction) requirements and for [shell configuration](#shell-configuration).
+
+Host installed tools should be kept as minimal as possible and only considered when there is no option to install them locally into a project. Mainly:
+
+- bootstrapping project-local tooling (e.g. toolchain managers like `mise`, `asdf`, `devbox`, etc.)
+- require host-wide installation (e.g. `docker`, `nix`, etc.)
+- projects being worked on provide no such system for project local tooling
+
 ### Host System Interaction
 
 When interacting with host local context agents should obey [salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context) ([summary](./summaries/salotz-rfc-023-local-agent-context.md)) for loading operator defined context and [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)) for agent generated content.
 
+### Shell Configuration
+
+This user uses the [bimhaw](https://github.com/salotz/bimhaw) tool for managing shell configuration. In this framework the standard `.profile`, `.bashrc`, etc. are generated and managed by a central configuration that brings in modules for different tool configuration.
+
+If a new shell integration is required these guidelines should be obeyed.
+
+The directory to use for configuration is `~/.bimker` (see [Bimker](#bimker)).
+
+### Bimker
+
+Bimker is just a nonsense name (loosely based on the word "bunker") used to refer to the git tracked repo which contains all of my personal host configuration.
+
+This directory is always located at `~/.bimker`. Agents should read the context in that directory/repo for understanding how to make changes there if necessary.
+
+Changes to Bimker should be treated with special care and first proposed and made explicit exactly what changes are being made and why. Do not attempt to refactor or change the structure unless specifically asked and currently working on Bimker as the project under work.
+
+Of particular interest is the shell configuration which is at `~/.bimker/bimhaw`. Refer to the [bimhaw](https://github.com/salotz/bimhaw) documentation for instructions on modifying this for all shell configuration tasks.
 
 ### Remote Resource Caching
 
@@ -55,6 +88,6 @@ When naming things (esp. files, folders, etc.) follow [salotz RFC 24](https://gi
 
 ### Reading the web
 
-When possible find a non html source to read on the web, as it is much more context efficient.
+When possible find a non-HTML source to read on the web, as it is much more context-efficient.
 
 This includes the markdown sources for a website (e.g. in github) or using the [llms.txt](https://llmstxt.org/) ([summary](./summaries/llms-txt-standard.md)) standard when available.
