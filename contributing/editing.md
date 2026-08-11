@@ -13,4 +13,6 @@ should request input from the author.
 
 Is the usage of terms and guidelines consistent with each other?
 
-Are there terms that should be defined in the glossary?
+Are there terms that should be defined in the [shared glossary](../shared/glossary.md)?
+
+Is portable guidance under `shared/` and host-specific guidance under `personal/`?

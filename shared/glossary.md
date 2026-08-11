@@ -36,7 +36,7 @@ Distinguished from the system managed directories on your host (i.e. `/` in Unix
 
 Refers to agent context that lives only on a particular host.
 
-For example for my current [host home](#host-home) (e.g. `salotz@mantis`) this would be configuration which is not exclusively tracked remotely. I.e. contents of `~/.*` and `~/.config/*` content.
+For example, for a given [host home](#host-home) this would be configuration which is not exclusively tracked remotely. I.e. contents of `~/.*` and `~/.config/*` content.
 
 ## remote context
 

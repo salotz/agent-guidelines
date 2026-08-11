@@ -24,7 +24,7 @@ Before agents aid in installing these tools they should request confirmation fro
 
 For example many tools require not only installation of executables but also adding to shell configuration or basic configuration of cache and data storage directories. Agents should create a plan for addressing these integrations.
 
-For specific guidelines on system integration use guidelines from [Host System Interaction](#host-system-interaction) requirements and for [shell configuration](#shell-configuration).
+For specific guidelines on system integration use guidelines from [Host System Interaction](#host-system-interaction). For operator-specific shell and host configuration procedures, use personal guidelines when they are loaded (e.g. [Shell Configuration and Bimker](../personal/shell-and-bimker.md)).
 
 Host installed tools should be kept as minimal as possible and only considered when there is no option to install them locally into a project. Mainly:
 
@@ -36,23 +36,7 @@ Host installed tools should be kept as minimal as possible and only considered w
 
 When interacting with host local context agents should obey [salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context) ([summary](./summaries/salotz-rfc-023-local-agent-context.md)) for loading operator defined context and [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)) for agent generated content.
 
-### Shell Configuration
-
-This user uses the [bimhaw](https://github.com/salotz/bimhaw) tool for managing shell configuration. In this framework the standard `.profile`, `.bashrc`, etc. are generated and managed by a central configuration that brings in modules for different tool configuration.
-
-If a new shell integration is required these guidelines should be obeyed.
-
-The directory to use for configuration is `~/.bimker` (see [Bimker](#bimker)).
-
-### Bimker
-
-Bimker is just a nonsense name (loosely based on the word "bunker") used to refer to the git tracked repo which contains all of my personal host configuration.
-
-This directory is always located at `~/.bimker`. Agents should read the context in that directory/repo for understanding how to make changes there if necessary.
-
-Changes to Bimker should be treated with special care and first proposed and made explicit exactly what changes are being made and why. Do not attempt to refactor or change the structure unless specifically asked and currently working on Bimker as the project under work.
-
-Of particular interest is the shell configuration which is at `~/.bimker/bimhaw`. Refer to the [bimhaw](https://github.com/salotz/bimhaw) documentation for instructions on modifying this for all shell configuration tasks.
+For operator-specific host paths and configuration procedures, see personal guidelines if they are loaded in this session (e.g. [Shell Configuration and Bimker](../personal/shell-and-bimker.md)).
 
 ### Remote Resource Caching
 
@@ -91,3 +75,13 @@ When naming things (esp. files, folders, etc.) follow [salotz RFC 24](https://gi
 When possible find a non-HTML source to read on the web, as it is much more context-efficient.
 
 This includes the markdown sources for a website (e.g. in github) or using the [llms.txt](https://llmstxt.org/) ([summary](./summaries/llms-txt-standard.md)) standard when available.
+
+### Planning
+
+A common pattern in agentic coding is to first have an agent make a plan and then have other agents execute it.
+
+These plan documents need to be saved as memory somewhere. It is preferrable to have this memory saved in repo as remote content, as working on plans and executing on them may span across sessions, hosts, and shared with other operators.
+
+The location to store these is in the project relative path `.agents/plans` (according to [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure)).
+
+It is up to agents to organize these into individual planning sessions and removing them once plans are complete.
