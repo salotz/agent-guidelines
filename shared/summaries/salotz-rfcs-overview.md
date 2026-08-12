@@ -9,6 +9,8 @@ These RFCs are referenced throughout the agent-guidelines as the source of perso
 - Project/AI coding structure (RFC 22)
 - Local agent context (RFC 23)
 - Extended XDG directories (RFC 24)
+- Host domain organization (RFC 25)
+- Domain local configuration (RFC 26)
 - And others (e.g. codetags, git commit messages, naming)
 
 ## Usage

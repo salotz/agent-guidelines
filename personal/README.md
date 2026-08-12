@@ -16,6 +16,8 @@ on this operator's hosts or when personal context is explicitly in scope.
   host-local agent context (`~/.agents/AGENTS.md`).
 - [Shell Configuration and Bimker](./shell-and-bimker.md): bimhaw-managed
   shell config and the `~/.bimker` host configuration repo.
+- [Host Layout](./host-layout.md): domain trees under `~/tree` and related
+  path conventions (extends salotz RFCs 22–26).
 - [skills/](./skills/): personal agent skills (e.g. remote repo cacher).
 
 ## Relationship to shared

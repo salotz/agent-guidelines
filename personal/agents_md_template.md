@@ -22,6 +22,7 @@ need a pointer from their own config (for example goose:
    - `shared/summaries/` before fetching full external standards
 2. **Personal (this host)** — apply because this host context is loaded:
    - `personal/shell-and-bimker.md`
+   - `personal/host-layout.md`
    - `personal/skills/` as relevant to the task
 
 If the guidelines repo is not already in context, locate or cache a
@@ -43,6 +44,8 @@ relying only on this summary.
   project-local tooling over host-wide installs when possible.
 - **Host / agent paths**: obey salotz RFC 23 (local agent context) and
   RFC 24 (extended XDG; agent-generated data under `xagents/` namespaces).
+- **Host layout**: remote work under `~/tree/<domain>/` (domains
+  `personal`, `examol`); see `personal/host-layout.md` and RFCs 25/26.
 - **Remote git repos as reference**: prefer a local cache via the personal
   **cacher** skill (`personal/skills/cacher`) instead of repeated clones.
 - **Tools**: prefer task-specific tools over a generic shell when available.
@@ -55,7 +58,8 @@ relying only on this summary.
 ## Shared habits still in force
 
 - Prefer task-specific tools over shell.
-- Follow salotz RFC 22 (project layout), RFC 23/24 (host context and paths).
+- Follow salotz RFC 22 (project layout), RFC 23/24 (host context and paths),
+  and RFC 25/26 when placing or resolving host domain paths.
 - Cache remote resources locally when possible.
 - Use compacted inlining; check `shared/summaries/` first.
 - Store multi-session plans under `.agents/plans` in the project when
