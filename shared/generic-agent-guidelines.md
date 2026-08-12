@@ -16,21 +16,14 @@ Recommendations in this repo should explicitly reference these standards with ex
 
 When working on projects agents should obey [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure) ([summary](./summaries/salotz-rfc-022-ai-coding-structure.md)).
 
-### Project Tooling
+### Project Management and Tooling
 
-Most projects require at least some host-installed tools. Agents can help install these tools but they must obey host rules (see [Host System Interaction](#host-system-interaction)).
+For in-repo tooling contracts, content-focused config files, layered tool
+roles, and project automation vs operator shell activation, see
+[Project Management and Tooling](./project-management-and-tooling.md).
 
-Before agents aid in installing these tools they should request confirmation from the operator. Agents should also outline the installation and integration requirements.
-
-For example many tools require not only installation of executables but also adding to shell configuration or basic configuration of cache and data storage directories. Agents should create a plan for addressing these integrations.
-
-For specific guidelines on system integration use guidelines from [Host System Interaction](#host-system-interaction). For operator-specific shell and host configuration procedures, use personal guidelines when they are loaded (e.g. [Shell Configuration and Bimker](../personal/shell-and-bimker.md)).
-
-Host installed tools should be kept as minimal as possible and only considered when there is no option to install them locally into a project. Mainly:
-
-- bootstrapping project-local tooling (e.g. toolchain managers like `mise`, `asdf`, `devbox`, etc.)
-- require host-wide installation (e.g. `docker`, `nix`, etc.)
-- projects being worked on provide no such system for project local tooling
+Host installs still require operator confirmation and integration planning;
+see that document and [Host System Interaction](#host-system-interaction).
 
 ### Host System Interaction
 

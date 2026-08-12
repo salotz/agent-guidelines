@@ -29,5 +29,9 @@ The [shared/summaries](./shared/summaries) folder contains compacted
 summaries of externally referenced resources. Check here before reading
 the referenced resource.
 
+Shared topic docs under [shared/](./shared/) are independently
+referenceable (for example
+[project-management-and-tooling.md](./shared/project-management-and-tooling.md)).
+
 Personal skills live under [personal/skills/](./personal/skills/).
 Shared skills live under [shared/skills/](./shared/skills/).

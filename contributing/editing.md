@@ -16,3 +16,5 @@ Is the usage of terms and guidelines consistent with each other?
 Are there terms that should be defined in the [shared glossary](../shared/glossary.md)?
 
 Is portable guidance under `shared/` and host-specific guidance under `personal/`?
+
+Do new cross-cutting shared topics get their own `shared/*.md` file plus a thin hub link (for example from `generic-agent-guidelines.md` and `README.md`), instead of bloating the generic hub?
