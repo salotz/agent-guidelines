@@ -83,3 +83,20 @@ These plan documents need to be saved as memory somewhere. It is preferrable to 
 The location to store these is in the project relative path `.agents/plans` (according to [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure)).
 
 It is up to agents to organize these into individual planning sessions and removing them once plans are complete.
+
+### Project READMEs
+
+Projects use both human facing `README` files (typically `README.md`) and agent specific `AGENTS.md`.
+
+Agents should read `README` as well. When writing `README.md` files
+exclude content that is more optimized for agents and keep this in `AGENTS.md`.
+
+For instance repositories have some typical layout with meta-information (`design`, `.agents`). These can be referenced in a README but should not be the primary content.
+
+Favor referencing the material in `contributing/` for users in the README which then branches out to details about what the `design` folder etc. are meant for.
+
+Focus on how a user coming into a project would want to be directed.
+
+Are you trying to just get an understanding of what the project is? Provide a summary of the project, with references to documentation if available.
+Are you a consumer of this project? Provide instructions on installing or accessing the software.
+Do you want to contribute to this project? Point to the contributing instructions.
