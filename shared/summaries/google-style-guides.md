@@ -5,6 +5,11 @@ Source: https://google.github.io/styleguide/
 ## Overview
 Collection of style guides for Google-originated open-source projects. Covers language-specific conventions for consistency in large codebases.
 
+This is **not** the
+[Google developer documentation style guide](https://developers.google.com/style/)
+([summary](./google-developer-documentation-style-guide.md)), which covers
+editorial style for technical prose.
+
 Available guides include:
 - C++ Style Guide
 - Python Style Guide

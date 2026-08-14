@@ -32,6 +32,9 @@ documents.
   projects).
 - [Technical Writing](./shared/technical-writing.md): Guidelines for
   technical writing meant for a non-personal audience.
+- [Writing Contributor Documentation](./shared/writing-contributing.md):
+  Contributor-facing docs, style-guide exceptions, and avoiding upstream
+  restatement.
 - [Research](./shared/research.md): Guidelines for research.
 
 ## Getting Started

@@ -17,7 +17,7 @@ need a pointer from their own config (for example goose:
 1. **Shared (portable baseline)** — always apply when available:
    - `shared/generic-agent-guidelines.md`
    - task-specific shared docs as needed (`software-guidelines.md`,
-     `research.md`, `technical-writing.md`)
+     `research.md`, `technical-writing.md`, `writing-contributing.md`)
    - `shared/glossary.md` for terms
    - `shared/summaries/` before fetching full external standards
 2. **Personal (this host)** — apply because this host context is loaded:

@@ -8,7 +8,7 @@ This repo is focused specifically on guidelines that do not have a practical mea
 
 Guidelines here however should make use of such standards through reference and compacted "inlining".
 
-Sources of standards can be official standards bodies like the [Agentic AI Foundation (AAIF)](https://aaif.io/) ([summary](./summaries/aaif.md)), community or organizational standards (e.g. [Google Style Guides](https://google.github.io/styleguide/) ([summary](./summaries/google-style-guides.md))), or personal standards (e.g. [salotz RFCs](https://github.com/salotz/rfcs) ([summary](./summaries/salotz-rfcs-overview.md))).
+Sources of standards can be official standards bodies like the [Agentic AI Foundation (AAIF)](https://aaif.io/) ([summary](./summaries/aaif.md)), community or organizational standards (e.g. language [Google Style Guides](https://google.github.io/styleguide/) ([summary](./summaries/google-style-guides.md)), or the [Google developer documentation style guide](https://developers.google.com/style/) ([summary](./summaries/google-developer-documentation-style-guide.md))), or personal standards (e.g. [salotz RFCs](https://github.com/salotz/rfcs) ([summary](./summaries/salotz-rfcs-overview.md))).
 
 Recommendations in this repo should explicitly reference these standards with extensions or modifications.
 
@@ -29,6 +29,15 @@ see that document and [Host System Interaction](#host-system-interaction).
 
 For large or opaque repository files that need tooling beyond normal VCS
 operation, see [Blob Management](./blob-management.md).
+
+### Writing
+
+For technical writing aimed at a non-personal audience, see
+[Technical Writing](./technical-writing.md).
+
+For contributor-facing documentation (style-guide baseline and exceptions,
+avoiding upstream restatement), see
+[Writing Contributor Documentation](./writing-contributing.md).
 
 ### Host System Interaction
 

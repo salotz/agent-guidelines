@@ -12,6 +12,7 @@ and share with others.
 - [Software](./software-guidelines.md): authorship and maintenance of software projects
 - [Blob Management](./blob-management.md): large/opaque files alongside VCS history (prefer DVC over git-lfs for new projects)
 - [Technical Writing](./technical-writing.md): writing for a non-personal audience
+- [Writing Contributor Documentation](./writing-contributing.md): contributor-facing docs (style guide exceptions, don't restate upstream)
 - [Research](./research.md): research work
 - [Glossary](./glossary.md): term definitions
 - [summaries/](./summaries/): compacted summaries of external standards
