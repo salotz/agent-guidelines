@@ -73,6 +73,11 @@ def poll():
 
 Use the advice in this [blog post](https://chris.beams.io/git-commit) ([summary](./summaries/git-commit-messages-chris-beams.md))
 
+### Blob Management
+
+For large or opaque files that should not live in ordinary git history, see
+[Blob Management](./blob-management.md).
+
 ### Git Branching Strategies
 
 Unless otherwise specified in a project you should always assume that the repository follows the [trunk based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) ([summary](./summaries/trunk-based-development-atlassian.md)) pattern with short lived feature branches.

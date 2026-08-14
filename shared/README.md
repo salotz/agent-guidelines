@@ -10,6 +10,7 @@ and share with others.
 - [Generic Agent Guidelines](./generic-agent-guidelines.md): generic advice for any agent-assisted work
 - [Project Management and Tooling](./project-management-and-tooling.md): config-file style, layered tooling, automation vs shell
 - [Software](./software-guidelines.md): authorship and maintenance of software projects
+- [Blob Management](./blob-management.md): large/opaque files alongside VCS history (prefer DVC over git-lfs for new projects)
 - [Technical Writing](./technical-writing.md): writing for a non-personal audience
 - [Research](./research.md): research work
 - [Glossary](./glossary.md): term definitions

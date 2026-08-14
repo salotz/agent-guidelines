@@ -27,6 +27,9 @@ documents.
   Config-file style, layered tooling, and how automation invokes tools.
 - [Software](./shared/software-guidelines.md): Guidelines specific to
   the authorship and maintenance of software projects.
+- [Blob Management](./shared/blob-management.md): Large or opaque files
+  managed alongside repository history (prefer DVC over git-lfs for new
+  projects).
 - [Technical Writing](./shared/technical-writing.md): Guidelines for
   technical writing meant for a non-personal audience.
 - [Research](./shared/research.md): Guidelines for research.

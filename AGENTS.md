@@ -31,7 +31,8 @@ the referenced resource.
 
 Shared topic docs under [shared/](./shared/) are independently
 referenceable (for example
-[project-management-and-tooling.md](./shared/project-management-and-tooling.md)).
+[project-management-and-tooling.md](./shared/project-management-and-tooling.md)
+and [blob-management.md](./shared/blob-management.md)).
 
 Personal skills live under [personal/skills/](./personal/skills/).
 Shared skills live under [shared/skills/](./shared/skills/).

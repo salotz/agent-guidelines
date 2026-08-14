@@ -61,3 +61,9 @@ A specially formatted comment tag (e.g. TODO, FIXME) placed in source code to ad
 ## Project tooling entrypoint
 
 The documented command used by humans, agents, and CI to run project tools with pinned versions and env (for example `mise exec -- …`), without requiring interactive shell activation. See [Project Management and Tooling](./project-management-and-tooling.md).
+
+## blob
+
+Abbreviation for "binary large object". Colloquially, any file that is too
+large or opaque to handle well with a code VCS tool like git. See
+[Blob Management](./blob-management.md).

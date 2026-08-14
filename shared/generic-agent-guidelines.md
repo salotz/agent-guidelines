@@ -25,6 +25,11 @@ roles, and project automation vs operator shell activation, see
 Host installs still require operator confirmation and integration planning;
 see that document and [Host System Interaction](#host-system-interaction).
 
+### Blob Management
+
+For large or opaque repository files that need tooling beyond normal VCS
+operation, see [Blob Management](./blob-management.md).
+
 ### Host System Interaction
 
 When interacting with host local context agents should obey [salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context) ([summary](./summaries/salotz-rfc-023-local-agent-context.md)) for loading operator defined context and [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)) for agent generated content.
