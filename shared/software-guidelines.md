@@ -10,6 +10,65 @@ Requirements for generic coding tasks.
 
 Follow [salotz RFC 6](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags) ([summary](./summaries/salotz-rfc-006-codetags.md)) when writing comments in source code.
 
+Only use **normative** codetag names from that RFC (e.g. `TODO`, `FIXME`,
+`NOTE`, `TOREV`). Do not invent ad-hoc “tags” that look like codetags
+(`Guard:`, `Context:`, `Plan:`, etc.). If no RFC tag fits, use a plain
+comment with no tag prefix. Plain comments are fine and are treated like
+informal `NOTE`s; prefer them over fake tags.
+
+### Source Comments
+
+Comment style for code agents write or edit. Language-specific style guides
+(e.g. [Google Style Guides](https://google.github.io/styleguide/)
+([summary](./summaries/google-style-guides.md))) still apply for formatting;
+this section is operator preference on **what** comments should say and
+**where** they sit.
+
+#### File preamble
+
+A short top-of-file preamble is good when it helps orientation:
+
+- What the file is for (one line or a few words is enough).
+- Links to authoritative docs when the file integrates an external tool.
+
+Do **not** paste long excerpts from upstream docs (install one-liners,
+full option lists, copy-pasted “Official:” command blocks). Links beat
+duplication; the code itself shows the commands in use.
+
+#### Placement
+
+Put comments **next to the code they describe**, not only in the file
+header. A guard, branch, or non-obvious step gets a comment immediately
+above it. The preamble is for file identity, not for every local rule.
+
+#### Content: describe the code, not the discussion
+
+Comments should explain what the code is doing (or a non-obvious *why*
+that still belongs in the codebase).
+
+Do **not**:
+
+- Restate planning debate (“don’t hardcode X”, “decoupled from module Y
+  per operator decision”, “supersedes step 0002”).
+- Write defensive essays that only make sense if you read the chat.
+- Duplicate what the next line of code already states clearly, at length.
+
+Short and local wins. Example for a missing-binary guard: “Check goose is
+accessible” — not a paragraph about PATH policy history.
+
+If choices in the code are non-obvious document them with the appropriate code tags and use references to ADRs or similar design documents to make references to historical details of the decision.
+
+For instance if you make a suboptimal decision for expediency use a code tag to make an indexible note of this technical debt:
+
+```python
+# HACK: This is not a robust implementation and needs to be hardened. See ADR-0354.
+def poll():
+    while True:
+        sleep(2)
+        if try():
+            break
+```
+
 ### Git Commit Messages
 
 Use the advice in this [blog post](https://chris.beams.io/git-commit) ([summary](./summaries/git-commit-messages-chris-beams.md))

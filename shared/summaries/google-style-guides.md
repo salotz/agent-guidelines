@@ -18,3 +18,11 @@ Also includes google-c-style.el for Emacs.
 When a particular language or format style guide is referenced, prefer the compacted version if available, or consult the specific guide linked from this page.
 
 General principle: consistent style makes large codebases easier to understand.
+
+## Relationship to operator comment style
+Google (and other) language guides cover formatting, naming, and often
+comment *mechanics*. For **what** comments should contain, **where** they
+attach, file preambles vs local notes, and **codetag** discipline, also
+follow [software-guidelines.md](../software-guidelines.md) (Source Comments
+and Code Tags). Those operator rules win when a generic style guide is
+silent or encourages noisier commentary.
