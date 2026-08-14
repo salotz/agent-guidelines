@@ -67,3 +67,12 @@ The documented command used by humans, agents, and CI to run project tools with 
 Abbreviation for "binary large object". Colloquially, any file that is too
 large or opaque to handle well with a code VCS tool like git. See
 [Blob Management](./blob-management.md).
+
+
+## Too much information (TMI)
+
+An observation that something is too verbose and providing information or context that is irrelevant in the current context.
+
+An operator may simply express "TMI" to an agent and the agent should then attempt to be more focused.
+
+This doesn't mean leave out important points just to cut word counts, but to optimize for limited attention.
