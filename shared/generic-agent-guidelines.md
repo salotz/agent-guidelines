@@ -100,3 +100,21 @@ Focus on how a user coming into a project would want to be directed.
 Are you trying to just get an understanding of what the project is? Provide a summary of the project, with references to documentation if available.
 Are you a consumer of this project? Provide instructions on installing or accessing the software.
 Do you want to contribute to this project? Point to the contributing instructions.
+
+### Markdown code fences
+
+Always set a language tag on fenced code blocks. Never open a fence with only
+three backticks and no language info string unless there really is no better option.
+
+For **shell commands** (including CLI invocations the reader would run in a
+terminal), use one of:
+
+| Tag | Use |
+| --- | --- |
+| `sh` | Portable POSIX-oriented examples (default for this repo) |
+| `bash` | Bash-specific syntax (`[[ ]]`, arrays, bashisms) |
+| `console` | Mixed prompt + command + sample output sessions |
+
+Do **not** mark runnable shell with `text`. Reserve `text` for diagrams, trees,
+non-executable snippets, and plain prose samples. Use `yaml`, `json`, `python`,
+etc. when the fence is that language.
