@@ -41,3 +41,76 @@ This should be written down in repo (see guidance on specifically where this is)
 The above guidance on working in small chunks does not apply when specifically doing work processes.
 
 Predefined work processes may or may not be written out as "skills".
+
+## Multi-session plans and decision back-and-forth
+
+Applies when a plan lives under a project’s `.agents/plans/` (RFC 22) and
+needs operator choices before or during execution.
+
+### File naming in plan folders
+
+Match the rest of the plan tree: **lowercase**, hyphenated if needed
+(`readme` is the usual `README.md` exception for directory indexes).
+
+Examples: `decisions.md`, `checklist.md`, `background/`.  
+**Do not** use shouty all-caps names like `PROCESS.md` for new plan files.
+
+### Single inbox for Q&A
+
+| Place | Role |
+| --- | --- |
+| **`decisions.md`** in the plan folder | **Only** place for prompts, operator **Answer**s, status, short notes |
+| `background/` | Optional long research; **no** “answer here” |
+| Plan `README.md` | Index, phase order, link to open-queue — not a second questionnaire |
+| Chat | Short ping only (“need A3 in decisions.md”) — not the answer archive |
+
+**Do not** create side questionnaires for the operator to fill in
+(`review-*.md`, `follow-ups-*.md`, `questions-*.md`, dated review dumps that
+mix research + new prompts). If research is long, put it under `background/`
+and link from the decision id.
+
+### Decision record shape
+
+Stable ids (`A1`, `A2`, …). In `decisions.md`:
+
+```markdown
+## A3 — short title
+
+Status: open | proposed | locked
+
+### Prompt
+What we need chosen (options if any).
+
+### Context
+(optional) short, or link to background/….md
+
+### Answer
+<!-- operator writes here -->
+
+### Notes
+(optional) agent lock rationale — not a new question list
+```
+
+- **open** — needs operator text under Answer  
+- **proposed** — agent drafted a default; operator accepts or edits Answer  
+- **locked** — implement against this; change only deliberately  
+
+### Round protocol (agent)
+
+1. Read `decisions.md` for Q&A state.  
+2. Update Status / Notes **in place**; append a **Changelog** line at the bottom.  
+3. Keep an **Open queue** table near the top of `decisions.md` (id, status, one-line need).  
+4. In chat: short checklist of open ids — tell the operator to edit `decisions.md`, not a new file.  
+5. New topics → next id in the same `decisions.md`.
+
+### Round protocol (operator)
+
+1. Write under **Answer** (set Status to `locked` if you want).  
+2. Say “decisions updated” / “go” in chat.  
+3. Ignore any stray side review file; agent should remove or stub it toward this process.
+
+### Plan-local process docs
+
+If a plan needs a short pointer to this workflow, use a **lowercase** file
+(e.g. `process.md`) that only links here — or link from the plan `README.md`
+with no extra file. Prefer not duplicating the full protocol in every plan.

@@ -21,6 +21,7 @@ need a pointer from their own config (for example goose:
    - `shared/glossary.md` for terms
    - `shared/summaries/` before fetching full external standards
 2. **Personal (this host)** — apply because this host context is loaded:
+   - `personal/work-process.md` — plan-execute + multi-session decision Q&A
    - `personal/shell-and-bimker.md`
    - `personal/host-layout.md`
    - `personal/skills/` as relevant to the task
@@ -64,6 +65,9 @@ relying only on this summary.
 - Use compacted inlining; check `shared/summaries/` first.
 - Store multi-session plans under `.agents/plans` in the project when
   applicable.
+- Multi-session decision back-and-forth: only that plan’s `decisions.md`
+  (see `personal/work-process.md`); no all-caps `PROCESS.md` or dated
+  `review-*.md` questionnaires.
 
 ## Conflicts
 
