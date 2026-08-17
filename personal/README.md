@@ -17,7 +17,8 @@ on this operator's hosts or when personal context is explicitly in scope.
 - [Personal information](./personal-info.md): preferred username and how it
   shows up in codetags and plan folders.
 - [Work process](./work-process.md): plan-execute chunks, commits, tests in
-  chat, and **multi-session plan decision Q&A** (single `decisions.md` inbox).
+  chat, multi-session plan decision Q&A (single `decisions.md` inbox), and
+  owner plan index (`todo.md` In Progress / Backlog).
 - [Shell Configuration and Bimker](./shell-and-bimker.md): bimhaw-managed
   shell config and the `~/.bimker` host configuration repo.
 - [Host Layout](./host-layout.md): domain trees under `~/tree` and related
