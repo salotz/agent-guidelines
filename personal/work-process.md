@@ -87,6 +87,28 @@ Examples: `decisions.md`, `checklist.md`, `background/`, owner-level
 mix research + new prompts). If research is long, put it under `background/`
 and link from the decision id.
 
+#### Plans are ephemeral 
+
+`.agents/plans/` is a **working scratchpad** for operator↔agent coordination
+(phases, checklists, `decisions.md` Q&A). Plan folders are expected to be
+**deleted when the work finishes** (git history retains them).
+
+**Do not** put plan-local references into durable tree content:
+
+| Avoid in code / long-lived docs | Prefer |
+| --- | --- |
+| `Q3`, `decision Q5`, `see tooling-revamp Q2` | Plain rationale in the code comment (“optional; not part of validate”) |
+| Links to `.agents/plans/.../decisions.md` from `noxfile`, packages, CI | Behavior described without plan anchors |
+| “Per plan D7…” in `design/` as the **only** record | **ADRs** under `design/decisions/` (Nygard-style) and/or architecture docs |
+
+**When a locked plan answer must outlive the plan:** promote it to a proper
+**ADR** (or architecture note) at close-out — or as soon as the choice is
+stable — then implement and document against **that**, not against `Q*`.
+
+Agents must **not** sprinkle `Qn` identifiers into source, tests, Makefiles,
+or operator-facing README sections as citations. Plan ids exist only inside
+the plan tree and chat about the plan.
+
 #### Decision record shape
 
 Stable ids (`Q1`, `Q2`, …). Prefix with a `Q` for "Question" in all plans.
@@ -198,8 +220,10 @@ in extra sections.
 
 Delete the plan folder when done (git history keeps it). **Before delete:**
 put durable outcomes in main docs (`design/architecture/`, README, etc.) and
-reflect any decisions worth keeping there — not only inside the plan tree
-you are about to remove.
+promote lasting choices to **`design/decisions/` ADRs** (or equivalent
+architecture records) — **not** only inside the plan tree you are about to
+remove. After promotion, **no** remaining product code should cite plan `Q*`
+ids (see **Plans are ephemeral** above).
 
 ##### Removing from In Progress
 

@@ -93,6 +93,14 @@ The location to store these is in the project relative path `.agents/plans` (acc
 
 It is up to agents to organize these into individual planning sessions and removing them once plans are complete.
 
+**Plans are ephemeral coordination artifacts**, not product documentation.
+Do **not** cite plan-local Q&A ids (`Q1`, …), plan folder paths, or
+`decisions.md` anchors in source code, tests, Makefiles, CI config, or
+other long-lived docs. When a choice must outlive the plan, promote it to
+an **ADR** under `design/decisions/` (RFC 22) and/or architecture docs, then
+reference those. Full Q&A protocol: personal
+[`work-process.md`](../personal/work-process.md) (*Plans are ephemeral*).
+
 ### Project READMEs
 
 Projects use both human facing `README` files (typically `README.md`) and agent specific `AGENTS.md`.
