@@ -62,6 +62,21 @@ A specially formatted comment tag (e.g. TODO, FIXME) placed in source code to ad
 
 The documented command used by humans, agents, and CI to run project tools with pinned versions and env (for example `mise exec -- …`), without requiring interactive shell activation. See [Project Management and Tooling](./project-management-and-tooling.md).
 
+## task runner
+
+The project layer that exposes named recipes (the **menu and wiring**) for
+common work: run a CLI with fixed flags, chain a few one-liners, or depend on
+other recipes. Examples: mise tasks, Make, just.
+
+Actual task running tools often are multifunctional, including build
+systems (e.g. `make`), package or tool managers, etc. We refer to them
+as task runners only with reference to those capabilities.
+
+## task
+
+One named unit of work in a [task runner](#task-runner) (for example
+`mise run validate`, a Make target, or a just recipe).
+
 ## blob
 
 Abbreviation for "binary large object". Colloquially, any file that is too
