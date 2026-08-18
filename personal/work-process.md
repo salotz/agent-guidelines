@@ -89,10 +89,12 @@ and link from the decision id.
 
 #### Decision record shape
 
-Stable ids (`A1`, `A2`, …). In `decisions.md`:
+Stable ids (`Q1`, `Q2`, …). Prefix with a `Q` for "Question" in all plans.
+
+In `decisions.md`:
 
 ```markdown
-## A3 — short title
+## Q3 — short title
 
 Status: open | proposed | locked
 
