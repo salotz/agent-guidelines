@@ -71,7 +71,27 @@ def poll():
 
 ### Git Commit Messages
 
-Use the advice in this [blog post](https://chris.beams.io/git-commit) ([summary](./summaries/git-commit-messages-chris-beams.md))
+Use the advice in this [blog post](https://chris.beams.io/git-commit)
+([summary](./summaries/git-commit-messages-chris-beams.md)).
+
+Additionally, favor bulleted lists rather than prose lists when listing
+changes.
+
+For example, don't do this:
+
+```markdown
+System A was refactored, system B was formatted, and system C was fixed.
+```
+
+Instead:
+
+```markdown
+- Refactor system A
+- Format system B
+- Fix system C
+```
+
+Otherwise follow the guidelines for [technical writing](./technical-writing.md).
 
 ### Blob Management
 
