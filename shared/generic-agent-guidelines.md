@@ -1,22 +1,37 @@
-## Generic Agent Guidelines
+# Generic Agent Guidelines
 
 Generic advice for any agent-assisted work.
 
-### RFC and Standard References
+## RFC and Standard References
 
-This repo is focused specifically on guidelines that do not have a practical means for more strict standardization.
+This repo is focused specifically on guidelines that do not have a practical
+means for more strict standardization.
 
-Guidelines here however should make use of such standards through reference and compacted "inlining".
+Guidelines here, however, should make use of such standards through reference
+and compacted “inlining”.
 
-Sources of standards can be official standards bodies like the [Agentic AI Foundation (AAIF)](https://aaif.io/) ([summary](./summaries/aaif.md)), community or organizational standards (e.g. language [Google Style Guides](https://google.github.io/styleguide/) ([summary](./summaries/google-style-guides.md)), or the [Google developer documentation style guide](https://developers.google.com/style/) ([summary](./summaries/google-developer-documentation-style-guide.md))), or personal standards (e.g. [salotz RFCs](https://github.com/salotz/rfcs) ([summary](./summaries/salotz-rfcs-overview.md))).
+Sources of standards can be official standards bodies like the
+[Agentic AI Foundation (AAIF)](https://aaif.io/)
+([summary](./summaries/aaif.md)), community or organizational standards
+(e.g. language
+[Google Style Guides](https://google.github.io/styleguide/)
+([summary](./summaries/google-style-guides.md)), or the
+[Google developer documentation style guide](https://developers.google.com/style/)
+([summary](./summaries/google-developer-documentation-style-guide.md))), or
+personal standards (e.g.
+[salotz RFCs](https://github.com/salotz/rfcs)
+([summary](./summaries/salotz-rfcs-overview.md))).
 
-Recommendations in this repo should explicitly reference these standards with extensions or modifications.
+Recommendations in this repo should explicitly reference these standards with
+extensions or modifications.
 
-### Project Layout
+## Project Layout
 
-When working on projects agents should obey [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure) ([summary](./summaries/salotz-rfc-022-ai-coding-structure.md)).
+When working on projects, agents should obey
+[salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure)
+([summary](./summaries/salotz-rfc-022-ai-coding-structure.md)).
 
-### Project Management and Tooling
+## Project Management and Tooling
 
 For in-repo tooling contracts, content-focused config files, layered tool
 roles, and project automation vs operator shell activation, see
@@ -25,12 +40,17 @@ roles, and project automation vs operator shell activation, see
 Host installs still require operator confirmation and integration planning;
 see that document and [Host System Interaction](#host-system-interaction).
 
-### Blob Management
+## Blob Management
 
 For large or opaque repository files that need tooling beyond normal VCS
 operation, see [Blob Management](./blob-management.md).
 
-### Writing
+## Software
+
+For authorship and maintenance of software projects (comments, commits,
+branching, tests), see [Software Guidelines](./software-guidelines.md).
+
+## Writing
 
 For technical writing aimed at a non-personal audience, see
 [Technical Writing](./technical-writing.md).
@@ -39,59 +59,122 @@ For contributor-facing documentation (style-guide baseline and exceptions,
 avoiding upstream restatement), see
 [Writing Contributor Documentation](./writing-contributing.md).
 
-### Host System Interaction
+## Research
 
-When interacting with host local context agents should obey [salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context) ([summary](./summaries/salotz-rfc-023-local-agent-context.md)) for loading operator defined context and [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)) for agent generated content.
+For research work (as distinct from production software and external technical
+writing), see [Research](./research.md).
 
-For operator-specific host paths and configuration procedures, see personal guidelines if they are loaded in this session (e.g. [Shell Configuration and Bimker](../personal/shell-and-bimker.md)).
+## Glossary
 
-### Remote Resource Caching
+Shared term definitions live in the [Glossary](./glossary.md). Prefer glossary
+terms (for example [operator](./glossary.md#operator),
+[host system](./glossary.md#host-system),
+[host local context](./glossary.md#host-local-context),
+[remote context](./glossary.md#remote-context)) over ad-hoc synonyms.
 
-When agents refer to external resources like repositories as part of context loading they should prefer making locally cached copies of them.
+## Host System Interaction
 
-Inspired from [this skill](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/librarian) ([summary](./summaries/librarian-skill-mitsuhiko.md)).
+When interacting with [host local context](./glossary.md#host-local-context),
+agents should obey
+[salotz RFC 23](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context)
+([summary](./summaries/salotz-rfc-023-local-agent-context.md)) for loading
+operator-defined context and
+[salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory)
+([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)) for
+agent-generated content.
 
-Should obey other guidelines for [host system interaction](#host-system-interaction).
+For operator-specific host paths and configuration procedures, see personal
+guidelines if they are loaded in this session (for example
+[Shell Configuration and Bimker](../personal/shell-and-bimker.md) in this
+repository).
 
-### Compacted Inlining
+## Remote Resource Caching
 
-When writing guidelines (such as these documents) if reference is made to an extensive external standard or guideline it should be good practice to provide a compacted version of that resource "inline" with this project.
+When agents refer to external resources like repositories as part of context
+loading, they should prefer making locally cached copies of them.
 
-For instance if you refer to and request adherence to a particular style guide you should provide a compacted summary of that style guide for immediate loading to context.
+Inspired by
+[this skill](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/librarian)
+([summary](./summaries/librarian-skill-mitsuhiko.md)).
 
-Agents should first check for compacted versions of resources before fetching and reading the larger ones. If additionally context is needed for specifics from larger standards this can be done incrementally and ideally in sub-agents.
+Also follow the guidelines for
+[host system interaction](#host-system-interaction).
 
-### Tool Preference
+## Compacted Inlining
 
-#### Prefer task specific tools over shell
+When writing guidelines (such as these documents), if reference is made to an
+extensive external standard or guideline it is good practice to provide a
+compacted version of that resource “inline” with this project.
 
-Whenever possible agents should prefer specific tools over use of a generic "shell" tool.
+For instance, if you refer to and request adherence to a particular style
+guide, you should provide a compacted summary of that style guide for immediate
+loading into context.
 
-This prevents unnecessary privilege escalation as a generic shell tool can do anything on a system. By using specific tools the human (or other agents) interacting with an agent can more easily understand both the intention of the agent as well as auditing potentially dangerous, disruptive, or risky calls to shells.
+Agents should first check for compacted versions of resources before fetching
+and reading the larger ones. If additional context is needed for specifics from
+larger standards, this can be done incrementally and ideally in sub-agents.
 
-For example if agents want to only read a particular file they should use a specific "read" tool or agent harness extension over `cat myfile.txt`.
+## Tool Preference
 
-Coding agents should also provide useful help and guidance to their controller if they are utilizing broader capability tools like shell when they could use more constrained tools. For example if the operator has not installed the necessary tools for an agent to follow this behavior (e.g. a `read-file` tool or extension) the agent should make this known to the operator and suggest solutions to installing more fine-grained tools.
+### Prefer task-specific tools over shell
 
-### Naming Things
+Whenever possible, agents should prefer specific tools over use of a generic
+“shell” tool.
 
-When naming things (esp. files, folders, etc.) follow [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)).
+This prevents unnecessary privilege escalation: a generic shell tool can do
+anything on a system. By using specific tools, the human (or other agents)
+interacting with an agent can more easily understand both the intention of the
+agent and audit potentially dangerous, disruptive, or risky shell calls.
 
-### Reading the web
+For example, if agents want only to read a particular file, they should use a
+specific “read” tool or agent harness extension over `cat myfile.txt`.
 
-When possible find a non-HTML source to read on the web, as it is much more context-efficient.
+Coding agents should also provide useful help and guidance to their
+[operator](./glossary.md#operator) when they are utilizing broader-capability
+tools like shell but could use more constrained tools. For example, if the
+operator has not installed the necessary tools for an agent to follow this
+behavior (e.g. a `read-file` tool or extension), the agent should make this
+known to the operator and suggest solutions for installing more fine-grained
+tools.
 
-This includes the markdown sources for a website (e.g. in github) or using the [llms.txt](https://llmstxt.org/) ([summary](./summaries/llms-txt-standard.md)) standard when available.
+## Naming Things
 
-### Planning
+When naming things (especially files, folders, and host paths), follow the
+naming and layout guidance in project structure and host-directory RFCs:
 
-A common pattern in agentic coding is to first have an agent make a plan and then have other agents execute it.
+- [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure)
+  ([summary](./summaries/salotz-rfc-022-ai-coding-structure.md)) for in-repo
+  layout (including name-expression guidance referenced there)
+- [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory)
+  ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)) for
+  extended XDG host paths
 
-These plan documents need to be saved as memory somewhere. It is preferrable to have this memory saved in repo as remote content, as working on plans and executing on them may span across sessions, hosts, and shared with other operators.
+## Reading the Web
 
-The location to store these is in the project relative path `.agents/plans` (according to [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure)).
+When possible, find a non-HTML source to read on the web, as it is much more
+context-efficient.
 
-It is up to agents to organize these into individual planning sessions and removing them once plans are complete.
+This includes the markdown sources for a website (e.g. on GitHub) or using the
+[llms.txt](https://llmstxt.org/)
+([summary](./summaries/llms-txt-standard.md)) standard when available.
+
+## Planning
+
+A common pattern in agentic coding is to first have an agent make a plan and
+then have other agents execute it.
+
+These plan documents need to be saved as memory somewhere. It is preferable to
+have this memory saved in-repo as
+[remote context](./glossary.md#remote-context), since working on plans and
+executing them may span sessions and hosts, and may be shared with other
+operators.
+
+The location to store these is the project-relative path `.agents/plans`
+(according to
+[salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure)).
+
+It is up to agents to organize these into individual planning sessions and to
+remove them once plans are complete.
 
 **Plans are ephemeral coordination artifacts**, not product documentation.
 Do **not** cite plan-local Q&A ids (`Q1`, …), plan folder paths, or
@@ -99,29 +182,68 @@ Do **not** cite plan-local Q&A ids (`Q1`, …), plan folder paths, or
 other long-lived docs. When a choice must outlive the plan, promote it to
 an **ADR** under `design/decisions/` (RFC 22) and/or architecture docs, then
 reference those. Full Q&A protocol: personal
-[`work-process.md`](../personal/work-process.md) (*Plans are ephemeral*).
+[`work-process.md`](../personal/work-process.md) (*Plans are ephemeral*), when
+that personal guidance is loaded.
 
-### Project READMEs
+## Project READMEs
 
-Projects use both human facing `README` files (typically `README.md`) and agent specific `AGENTS.md`.
+Projects use both human-facing `README` files (typically `README.md`) and
+agent-specific `AGENTS.md`.
 
-Agents should read `README` as well. When writing `README.md` files
-exclude content that is more optimized for agents and keep this in `AGENTS.md`.
+Agents should read `README` as well. When writing `README.md` files, exclude
+content that is more optimized for agents and keep that in `AGENTS.md`.
 
-For instance repositories have some typical layout with meta-information (`design`, `.agents`). These can be referenced in a README but should not be the primary content.
+For instance, repositories have some typical layout with meta-information
+(`design`, `.agents`). These can be referenced in a README but should not be
+the primary content.
 
-Favor referencing the material in `contributing/` for users in the README which then branches out to details about what the `design` folder etc. are meant for.
+Favor referencing the material in `contributing/` for users in the README,
+which then branches out to details about what the `design` folder and similar
+are meant for.
 
 Focus on how a user coming into a project would want to be directed.
 
-Are you trying to just get an understanding of what the project is? Provide a summary of the project, with references to documentation if available.
-Are you a consumer of this project? Provide instructions on installing or accessing the software.
-Do you want to contribute to this project? Point to the contributing instructions.
+- Are you trying only to understand what the project is? Provide a summary of
+  the project, with references to documentation if available.
+- Are you a consumer of this project? Provide instructions on installing or
+  accessing the software.
+- Do you want to contribute to this project? Point to the contributing
+  instructions.
 
-### Markdown code fences
+## Agent-Oriented Document Format and Style
+
+As described elsewhere, context for agents and humans is written into
+documents in projects.
+
+This section sets some of the standards for those documents.
+
+### Format
+
+There are many different kinds of documents for different purposes.
+
+For documents that are meant primarily for human-to-agent (H2A) and
+human-to-human-via-plaintext (H2H-plain) communication, they should use
+Markdown.
+
+Specifically,
+[GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/) as specified
+by the spec.
+
+Current renderer features on [github.com](https://github.com) that are not in
+the spec should not be used for these documents.
+
+### Style
+
+- Do not use
+  [setext style headings](https://github.github.com/gfm/#setext-headings)
+- Only use `---` style
+  [thematic breaks](https://github.github.com/gfm/#thematic-breaks)
+
+#### Code fences
 
 Always set a language tag on fenced code blocks. Never open a fence with only
-three backticks and no language info string unless there really is no better option.
+three backticks and no language info string unless there really is no better
+option.
 
 For **shell commands** (including CLI invocations the reader would run in a
 terminal), use one of:
