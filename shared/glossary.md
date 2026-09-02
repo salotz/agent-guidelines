@@ -12,11 +12,41 @@ A self-contained unit of work and content. Usually materialized as specific fold
 
 Almost always a [repository](#repository), but not necessarily.
 
+## host machine
+
+The physical device that can run [host systems](#host-system). This term refers to the hardware, not the operating system software.
+
+Host machines are typically named with an informal but suggestive naming scheme, the **host name**.
+
+Host name here overlaps with the networking and Linux hostname concepts, but is not identical.
+
+Related kinds of host machine include [workstations](#workstation), remote machines, and VMs.
+
 ## host system
 
 The computer and operating system for which the primary data sources (e.g. [projects](#project)) and compute are based on.
 
 Simply, the laptop or machine and your operating system as an [operator](#operator) you interact with.
+
+Technically a host system is the operating system software on a [host machine](#host-machine).
+
+There can be more than one host system on a host machine through virtualization or containerization.
+
+Typically there is a **base host system** (for example a hypervisor host) that is directly "on the metal" and installed on the machine.
+
+Host systems on the base host system are called **tenant host systems**.
+
+The base host system usually has a persistent name as the host machine (usually reflected in the Unix hostname).
+
+Tenant host systems don't usually have persistent host names.
+
+## workstation
+
+A type of [host machine](#host-machine) that an [operator](#operator) physically operates, such as a laptop or desktop.
+
+Remotely accessed workstations are called **remote workstations**.
+
+Remote workstations may be physical host machines owned and operated by the operator, or machines in the cloud.
 
 ## repository
 
