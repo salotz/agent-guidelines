@@ -6,9 +6,11 @@ These are guidelines specific to the authorship and maintenance of software proj
 
 Requirements for generic coding tasks.
 
-### Code Tags
+### Codetags
 
-Follow [salotz RFC 6](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags) ([summary](./summaries/salotz-rfc-006-codetags.md)) when writing comments in source code.
+Follow [salotz RFC 6](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags)
+([summary](./summaries/salotz-rfc-006-codetags.md); glossary:
+[codetag](./glossary.md#codetag)) when writing comments in source code.
 
 Only use **normative** codetag names from that RFC (e.g. `TODO`, `FIXME`,
 `NOTE`, `TOREV`). Do not invent ad-hoc “tags” that look like codetags
@@ -18,8 +20,8 @@ informal `NOTE`s; prefer them over fake tags.
 
 ### Source Comments
 
-Comment style for code agents write or edit. Language-specific style guides
-(e.g. [Google Style Guides](https://google.github.io/styleguide/)
+Comment style for code that agents write or edit. Language-specific style
+guides (e.g. [Google Style Guides](https://google.github.io/styleguide/)
 ([summary](./summaries/google-style-guides.md))) still apply for formatting;
 this section is operator preference on **what** comments should say and
 **where** they sit.
@@ -41,6 +43,39 @@ Put comments **next to the code they describe**, not only in the file
 header. A guard, branch, or non-obvious step gets a comment immediately
 above it. The preamble is for file identity, not for every local rule.
 
+By “next to” we mean **above** the code. Do not put comments on the same
+line as code.
+
+For example, do this:
+
+```python
+# Data for the process
+data = {
+    # the first thing
+    "a": 1,
+    # the second thing
+    "b": 2,
+}
+```
+
+and **not**:
+
+```python
+# Data for the process
+data = {
+    "a": 1,  # the first thing
+    "b": 2,  # the second thing
+}
+```
+
+Same-line comments make traversal in a code editor difficult. Do not use
+them. (Any exception would be exceedingly rare and outside normal agent
+edits.)
+
+Place each comment on its own line, indented with the code it describes—
+the same block-oriented layout as the surrounding code.
+
+
 #### Content: describe the code, not the discussion
 
 Comments should explain what the code is doing (or a non-obvious *why*
@@ -56,9 +91,12 @@ Do **not**:
 Short and local wins. Example for a missing-binary guard: “Check goose is
 accessible” — not a paragraph about PATH policy history.
 
-If choices in the code are non-obvious document them with the appropriate code tags and use references to ADRs or similar design documents to make references to historical details of the decision.
+If choices in the code are non-obvious, document them with the appropriate
+codetags and point to ADRs or similar design documents for historical
+detail of the decision.
 
-For instance if you make a suboptimal decision for expediency use a code tag to make an indexible note of this technical debt:
+For instance, if you make a suboptimal decision for expediency, use a
+codetag to leave an indexable note of this technical debt:
 
 ```python
 # HACK: This is not a robust implementation and needs to be hardened. See ADR-0354.

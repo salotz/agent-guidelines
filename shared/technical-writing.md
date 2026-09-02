@@ -68,3 +68,32 @@ which a table is favorable when rendered in HTML.
 
 This preference will be made explicit when needed, so default to not using
 tables — or only suggest them.
+
+
+## Code Snippets
+
+Follow the same guidelines for writing
+[software](./software-guidelines.md). However, by the nature of code
+snippets they will differ in some ways (for example modularity). Those
+differences will be documented specifically in time.
+
+### Comments
+
+For comments in snippets, follow the
+[source comment](./software-guidelines.md#source-comments) style used in
+real code—comments on their own lines:
+
+```python
+# Data for the process
+data = {
+    # the first thing
+    "a": 1,
+    # the second thing
+    "b": 2,
+}
+```
+
+Comments in code snippets should not use
+[codetags](./glossary.md#codetag) (unless demonstrating codetags) and may
+break from the stricter rules that apply in actual software module code.
+
