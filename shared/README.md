@@ -14,7 +14,7 @@ and share with others.
 - [Technical Writing](./technical-writing.md): writing for a non-personal audience
 - [Writing Contributor Documentation](./writing-contributing.md): contributor-facing docs (style guide exceptions, don't restate upstream)
 - [Research](./research.md): research work
-- [Glossary](./glossary.md): term definitions
+- [Glossary](./glossary.md): term definitions ([RFC 29](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md) format; [summary](./summaries/salotz-rfc-029-glossary-format.md))
 - [summaries/](./summaries/): compacted summaries of external standards
 - [skills/](./skills/): shared agent skills
 

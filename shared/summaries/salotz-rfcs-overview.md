@@ -11,7 +11,8 @@ These RFCs are referenced throughout the agent-guidelines as the source of perso
 - Extended XDG directories (RFC 24)
 - Host domain organization (RFC 25)
 - Domain local configuration (RFC 26)
-- And others (e.g. codetags, git commit messages, naming)
+- Glossary Markdown format (RFC 29)
+- And others (e.g. codetags, git commit messages, naming, PRJX layout)
 
 ## Usage
 When a specific `salotz.NNN_...` RFC is referenced, prefer the compacted summary for that RFC (see other files in this summaries/ directory).

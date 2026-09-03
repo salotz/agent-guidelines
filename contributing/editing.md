@@ -14,6 +14,9 @@ should request input from the author.
 Is the usage of terms and guidelines consistent with each other?
 
 Are there terms that should be defined in the [shared glossary](../shared/glossary.md)?
+New or edited glossary entries must follow
+[salotz RFC 29](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md)
+([summary](../shared/summaries/salotz-rfc-029-glossary-format.md)).
 
 Is portable guidance under `shared/` and host-specific guidance under `personal/`?
 

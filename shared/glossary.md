@@ -2,6 +2,9 @@
 
 This glossary defines key terms and provides cross-references between them.
 
+Format: [salotz RFC 29 (Glossary Format)](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md)
+([summary](./summaries/salotz-rfc-029-glossary-format.md)).
+
 ## operator
 
 The human person that is controlling an agentic aided process.

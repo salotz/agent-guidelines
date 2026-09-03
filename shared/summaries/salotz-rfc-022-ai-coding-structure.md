@@ -22,7 +22,7 @@ Standard structure for repositories to provide incremental, useful context to AI
 ### Design Documentation (`design/`)
 - `README.md` + optional `AGENTS.md`
 - `goals.md`: goals, non-goals, principles
-- `glossary.md`: project terminology (subheading format for cross-links)
+- `glossary.md`: project terminology ([RFC 29](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md) subheading format for cross-links; [summary](./salotz-rfc-029-glossary-format.md))
 - `architecture/`: current architecture state
 - `decisions/`: ADRs using Nygard style (status, context, decision, consequences)
 

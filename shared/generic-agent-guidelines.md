@@ -72,6 +72,12 @@ terms (for example [operator](./glossary.md#operator),
 [host local context](./glossary.md#host-local-context),
 [remote context](./glossary.md#remote-context)) over ad-hoc synonyms.
 
+Glossary **structure** follows
+[salotz RFC 29](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md)
+([summary](./summaries/salotz-rfc-029-glossary-format.md)): `# Glossary`, one
+`## term` subheading per entry, cross-links between terms (not a
+table-as-glossary). When adding or editing entries, keep that format.
+
 ## Host System Interaction
 
 When interacting with [host local context](./glossary.md#host-local-context),
