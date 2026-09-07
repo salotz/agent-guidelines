@@ -181,4 +181,3 @@ For documents that are meant primarily for human-to-agent (H2A) and human-to-hum
 See the [Markdown style guide](./markdown-style-guide.md) for Markdown dialect, wrapping, fences, tables, and related rules.
 
 See the [Technical writing guidelines](./technical-writing.md) for broader writing preferences that partially apply to agent communication.
-

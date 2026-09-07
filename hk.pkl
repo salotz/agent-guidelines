@@ -1,0 +1,26 @@
+// Git hooks + check/fix for agent-guidelines (Markdown-first).
+// Q5: whitespace + final newline only; do not reflow Markdown.
+// Docs: https://hk.jdx.dev/
+amends "package://github.com/jdx/hk/releases/download/v1.58.1/hk@1.58.1#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.58.1/hk@1.58.1#/Builtins.pkl"
+
+local linters = new Mapping<String, Step> {
+  ["trailing-whitespace"] = (Builtins.trailing_whitespace) {}
+  // Builtins.newlines → hk util end-of-file-fixer (final newline)
+  ["newlines"] = (Builtins.newlines) {}
+}
+
+hooks {
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+    steps = linters
+  }
+  ["fix"] {
+    fix = true
+    steps = linters
+  }
+  ["check"] {
+    steps = linters
+  }
+}

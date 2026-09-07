@@ -1,0 +1,245 @@
+#!/bin/sh
+# Check bare-minimum host tools for this repo (check-only; no installs).
+# POSIX sh only. Does not install packages or run network installers.
+#
+# Reads host-tools.conf next to this script (.bootstrap/) (whitespace columns; see that file).
+#
+# Usage:
+#   ./.bootstrap/host-tool-check
+#   sh .bootstrap/host-tool-check
+
+set -eu
+
+# ---------------------------------------------------------------------------
+# Resolve repo root from this script's location (POSIX: no readlink -f).
+# Prefer .prjx-root, then mise.toml (walk upward if needed).
+# ---------------------------------------------------------------------------
+SCRIPT_PATH=$0
+case ${SCRIPT_PATH} in
+  /*) ;;
+  *) SCRIPT_PATH=$(pwd)/${SCRIPT_PATH} ;;
+esac
+SCRIPT_DIR=${SCRIPT_PATH%/*}
+SCRIPT_DIR=$(CDPATH= cd "${SCRIPT_DIR}" && pwd) || exit 1
+ROOT_DIR=$(CDPATH= cd "${SCRIPT_DIR}/.." && pwd) || exit 1
+
+_is_repo_root() {
+  _cand=$1
+  if [ -f "${_cand}/.prjx-root" ] || [ -f "${_cand}/mise.toml" ]; then
+    return 0
+  fi
+  return 1
+}
+
+if ! _is_repo_root "${ROOT_DIR}"; then
+  ROOT_DIR=$(pwd)
+  while [ "${ROOT_DIR}" != "/" ]; do
+    if _is_repo_root "${ROOT_DIR}"; then
+      break
+    fi
+    ROOT_DIR=$(dirname "${ROOT_DIR}")
+  done
+fi
+
+cd "${ROOT_DIR}" || exit 1
+
+HOST_TOOLS_CONF="${SCRIPT_DIR}/host-tools.conf"
+
+FAILS=0
+WARNS=0
+
+ok() {
+  printf '  OK   %s\n' "$1"
+}
+
+fail() {
+  printf '  FAIL %s\n' "$1"
+  FAILS=$((FAILS + 1))
+}
+
+warn() {
+  printf '  WARN %s\n' "$1"
+  WARNS=$((WARNS + 1))
+}
+
+have() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+# Strip to leading dotted numeric token (first X.Y.Z… in the string).
+extract_version() {
+  printf '%s' "$1" | sed -n 's/[^0-9]*\([0-9][0-9]*\(\.[0-9][0-9]*\)*\).*/\1/p' | head -n 1
+}
+
+# Return 0 if $1 >= $2 (both dotted numerics). Missing fields treat as 0.
+version_ge() {
+  _a=$1
+  _b=$2
+  _i=1
+  while :; do
+    _af=$(printf '%s' "${_a}" | cut -d. -f"${_i}")
+    _bf=$(printf '%s' "${_b}" | cut -d. -f"${_i}")
+    if [ -z "${_af}" ] && [ -z "${_bf}" ]; then
+      return 0
+    fi
+    _af=${_af:-0}
+    _bf=${_bf:-0}
+    case ${_af} in *[!0-9]*) _af=0 ;; esac
+    case ${_bf} in *[!0-9]*) _bf=0 ;; esac
+    if [ "${_af}" -gt "${_bf}" ]; then
+      return 0
+    fi
+    if [ "${_af}" -lt "${_bf}" ]; then
+      return 1
+    fi
+    _i=$((_i + 1))
+    if [ "${_i}" -gt 12 ]; then
+      return 0
+    fi
+  done
+}
+
+tool_version_raw() {
+  _name=$1
+  case ${_name} in
+    git)
+      git --version 2>/dev/null || true
+      ;;
+    mise)
+      mise --version 2>/dev/null || true
+      ;;
+    *)
+      if have "${_name}"; then
+        "${_name}" --version 2>/dev/null || "${_name}" version 2>/dev/null || true
+      fi
+      ;;
+  esac
+}
+
+report_missing() {
+  _name=$1
+  _class=$2
+  _msg=$3
+  if [ "${_class}" = "required" ]; then
+    fail "${_name} — ${_msg}"
+  else
+    warn "${_name} — ${_msg}"
+  fi
+}
+
+check_tool_row() {
+  _name=$1
+  _min=$2
+  _class=$3
+
+  if [ "${_class}" != "required" ] && [ "${_class}" != "optional" ]; then
+    warn "host-tools.conf: unknown class '${_class}' for ${_name} (skipped)"
+    return 0
+  fi
+
+  if ! have "${_name}"; then
+    case ${_name} in
+      mise)
+        report_missing mise "${_class}" "not on PATH"
+        if [ "${_class}" = "required" ]; then
+          printf '\n  Install mise, then return to this directory:\n'
+          printf '    https://mise.jdx.dev/getting-started.html\n'
+          printf '  Example (review script before piping):\n'
+          printf '    curl https://mise.run | sh\n'
+          printf '  Then open a new shell (or activate mise) and re-run:\n'
+          printf '    ./.bootstrap/host-tool-check\n\n'
+        fi
+        ;;
+      *)
+        report_missing "${_name}" "${_class}" "not on PATH"
+        ;;
+    esac
+    return 0
+  fi
+
+  _raw=$(tool_version_raw "${_name}")
+  _ver=$(extract_version "${_raw}")
+
+  if [ "${_min}" = "-" ] || [ -z "${_min}" ]; then
+    if [ -n "${_ver}" ]; then
+      ok "${_name} ${_ver} (no minimum)"
+    else
+      ok "${_name} present (version not parsed)"
+    fi
+    return 0
+  fi
+
+  if [ -z "${_ver}" ]; then
+    report_missing "${_name}" "${_class}" "present but version could not be parsed (need >= ${_min})"
+    return 0
+  fi
+
+  if version_ge "${_ver}" "${_min}"; then
+    ok "${_name} ${_ver} (>= ${_min})"
+  else
+    report_missing "${_name}" "${_class}" "${_ver} is below minimum ${_min}"
+  fi
+}
+
+printf 'agent-guidelines host-tool-check (check-only)\n'
+printf 'repo: %s\n' "${ROOT_DIR}"
+
+if [ ! -f "${HOST_TOOLS_CONF}" ]; then
+  fail "host-tools.conf not found at ${HOST_TOOLS_CONF}"
+  printf '\nResult: missing host-tools.conf\n'
+  exit 1
+fi
+printf 'config: %s\n\n' "${HOST_TOOLS_CONF}"
+
+if [ -f "${ROOT_DIR}/.prjx-root" ]; then
+  ok ".prjx-root present"
+else
+  warn ".prjx-root missing (PRJX sentinel expected at repo root)"
+fi
+
+if [ -f "${ROOT_DIR}/mise.toml" ]; then
+  ok "mise.toml present"
+else
+  fail "mise.toml not found — run from a full clone of this repo"
+fi
+
+printf '\nHost tools (from host-tools.conf)\n'
+
+while IFS= read -r _line || [ -n "${_line}" ]; do
+  _line=$(printf '%s' "${_line}" | sed 's/^[[:space:]]*//')
+  case ${_line} in
+    ''|\#*) continue ;;
+  esac
+  _name=$(printf '%s' "${_line}" | awk '{print $1}')
+  _min=$(printf '%s' "${_line}" | awk '{print $2}')
+  _class=$(printf '%s' "${_line}" | awk '{print $3}')
+  if [ -z "${_name}" ] || [ -z "${_min}" ] || [ -z "${_class}" ]; then
+    warn "host-tools.conf: bad line (need name min_version class): ${_line}"
+    continue
+  fi
+  check_tool_row "${_name}" "${_min}" "${_class}"
+done < "${HOST_TOOLS_CONF}"
+
+printf '\nNext steps (after required checks pass)\n'
+if have mise; then
+  printf '  1. cd %s\n' "${ROOT_DIR}"
+  printf '  2. mise install\n'
+  printf '  3. mise run preload              # git hooks via hk\n'
+  printf '  4. mise run check                # hk check --all\n'
+  printf '  (Shell activation is optional; prefer mise run / mise exec.)\n'
+else
+  printf '  Install mise (see FAIL messages above), then re-run this script.\n'
+fi
+
+printf '\n'
+if [ "${FAILS}" -gt 0 ]; then
+  printf 'Result: %s required check(s) failed, %s warning(s).\n' "${FAILS}" "${WARNS}"
+  exit 1
+fi
+
+printf 'Result: all required checks passed'
+if [ "${WARNS}" -gt 0 ]; then
+  printf ' (%s warning(s))' "${WARNS}"
+fi
+printf '.\n'
+exit 0

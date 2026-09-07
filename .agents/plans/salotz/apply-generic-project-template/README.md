@@ -7,7 +7,9 @@ Dogfood [templates/generic-project.md](../../../../content/templates/generic-pro
 - Planning:
   **Q1–Q9 locked** (operator accepted 2026-09-07).
 - Execution:
-  **Phase 1–3 done** (hygiene, `content/` migration, PRJX); next = Phase 4 bootstrap + mise + hk + preload.
+  **Phase 1–4 files done**; host-tool-check green in-agent.
+  **Operator still needs** `mise trust` (if prompted) → `mise install` → `mise run preload` → `mise run check` (sandbox blocked project tool install / new binary exec).
+  Next plan step = Phase 5 RFC 22 docs (`contributing/development.md`, design, …).
 
 ## Goals
 

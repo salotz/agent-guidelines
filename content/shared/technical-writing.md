@@ -99,4 +99,3 @@ data = {
 ```
 
 Comments in code snippets should not use [codetags](./glossary.md#codetag) (unless demonstrating codetags) and may break from the stricter rules that apply in actual software module code.
-

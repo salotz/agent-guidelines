@@ -1,0 +1,35 @@
+# Project tools and thin tasks. Usage docs: contributing/ (development.md).
+# Bootstrap host checks: .bootstrap/host-tool-check (before mise is required only for git+mise).
+
+[tools]
+hk = "1.58.1"
+
+[env]
+# Prefer mise-wrapped hook installs when supported.
+HK_MISE = "1"
+
+# Inline: simple one-liners only. Shell features / shared logic → .tasks/.
+
+[tasks.host-tool-check]
+description = "Check host tools from .bootstrap/host-tools.conf (no installs)"
+run = "sh .bootstrap/host-tool-check"
+
+[tasks.preload]
+description = "Install hk git hooks for this clone"
+# Prefer mise-aware install when HK_MISE=1 (set in [env]).
+run = "hk install"
+[tasks.clean-preload]
+description = "Remove hk hooks (reinstall via mise run preload)"
+run = "hk uninstall || true"
+
+[tasks.check]
+description = "Run hk checks on the full tree (no writes)"
+run = "hk check --all"
+
+[tasks.format]
+description = "Apply hk fixes on the full tree (trailing whitespace + final newlines)"
+run = "hk fix --all"
+
+[tasks.validate]
+description = "Alias for check"
+depends = ["check"]

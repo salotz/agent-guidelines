@@ -1,4 +1,4 @@
-# PRJX host-local tree (see salotz RFC 28)
+# PRJX host-local tree (see salotz RFC 28) — also covers any project-local mise data under .local/
 .local/
 
 # mise machine-local overrides / secrets

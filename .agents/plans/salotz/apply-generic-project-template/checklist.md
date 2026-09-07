@@ -39,15 +39,15 @@ Do not put operator answers here (use [decisions.md](./decisions.md)).
 
 ## Phase 4 — Bootstrap + mise + hk + preload
 
-- [ ] `.bootstrap/host-tools.conf` (Q7)
-- [ ] `.bootstrap/host-tool-check` executable (Q7)
-- [ ] `mise.toml` (Q4): tools + `host-tool-check` / `preload` / `check` tasks
-- [ ] `hk.pkl` (Q5)
-- [ ] `.tasks/preload.py` only if Q8 needs more than one-liner
-- [ ] `./.bootstrap/host-tool-check` passes (or reported)
-- [ ] `mise install`
-- [ ] `mise run preload` if Q9 yes
-- [ ] `mise run check` green
+- [x] `.bootstrap/host-tools.conf` (Q7)
+- [x] `.bootstrap/host-tool-check` (Q7; run via `sh .bootstrap/host-tool-check`)
+- [x] `mise.toml` (Q4): tools + `host-tool-check` / `preload` / `check` tasks
+- [x] `hk.pkl` (Q5: trailing-whitespace + newlines builtins)
+- [x] `.tasks/preload.py` skipped (Q8 hooks-only one-liner)
+- [x] `sh .bootstrap/host-tool-check` passes in agent session
+- [ ] `mise install` — **blocked in agent sandbox** (host mise state/trust + no new binary exec); operator should run
+- [ ] `mise run preload` — operator (Q9)
+- [ ] `mise run check` — operator (Q9)
 
 ## Phase 5 — RFC 22 + docs
 

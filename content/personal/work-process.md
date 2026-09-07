@@ -77,7 +77,7 @@ Examples:
 dated review dumps that mix research + new prompts).
 If research is long, put it under `background/` and link from the decision id.
 
-#### Plans are ephemeral 
+#### Plans are ephemeral
 
 `.agents/plans/` is a **working scratchpad** for operator↔agent coordination (phases, checklists, `decisions.md` Q&A).
 Plan folders are expected to be **deleted when the work finishes** (git history retains them).
