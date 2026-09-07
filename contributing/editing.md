@@ -1,10 +1,12 @@
+# Editing
+
 As an editor you are responsible for checking the work of the author.
 
-## Check Links
+## Check links
 
 All links should be checked that they are valid.
 
-## Spelling and Grammar
+## Spelling and grammar
 
 Spelling and grammar should be fixed where obvious.
 Larger changes should request input from the author.

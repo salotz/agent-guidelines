@@ -1,8 +1,8 @@
-## Project Management and Tooling
+# Project management and tooling
 
 Generic rules for how agents (and humans) structure **project tooling** and **machine-oriented config** versus **human/operator usage docs**.
 
-### Relationship to other standards
+## Relationship to other standards
 
 | Concern | Where it lives |
 |---------|----------------|
@@ -11,7 +11,7 @@ Generic rules for how agents (and humans) structure **project tooling** and **ma
 | Where binaries and agent-generated data live on disk | [salotz RFC 24](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.024_extended_xdg_base_directory) ([summary](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)) |
 | **This document** | In-repo tooling contracts, config-file style, and how automation invokes tools |
 
-### Config and tooling files stay content-focused
+## Config and tooling files stay content-focused
 
 Applies to machine-oriented manifests such as:
 `.mise.toml`,
@@ -28,7 +28,7 @@ Applies to machine-oriented manifests such as:
 - **Do**:
   put how-to, bootstrap, and day-to-day workflow in the **project** `contributing/` tree (RFC 22), for example `contributing/development.md`.
 
-### Layered tooling (do not collapse roles)
+## Layered tooling (do not collapse roles)
 
 Keep responsibilities separate.
 Concrete tools are examples;
@@ -41,7 +41,7 @@ projects choose stacks.
 | Task runner | Thin recipes only — not a second package manager | just, make |
 | Build backend | Packaging metadata and build — not env management | hatchling, setuptools |
 
-### Invocation: project automation vs operator shell
+## Invocation: project automation vs operator shell
 
 - **In-repo** commands (task recipes, scripts,
   CI,
@@ -55,7 +55,7 @@ projects choose stacks.
 
 Document the project’s entrypoint in `contributing/` (for example `mise exec -- just <recipe>`), not only in config file comments.
 
-### Secrets and local overrides
+## Secrets and local overrides
 
 - Committed config:
   non-secret defaults only.
@@ -65,7 +65,7 @@ Document the project’s entrypoint in `contributing/` (for example `mise exec -
   Never commit tokens.
   For secrets prefer just-in-time fetching from tools if possible (e.g. `bitwarden` or `op` (OnePass)).
 
-### Host-installed tools
+## Host-installed tools
 
 Prefer project-local tooling over host-wide installs when possible.
 
@@ -77,13 +77,13 @@ bootstrapping a tool manager,
 tools that must be host-wide,
 or projects with no project-local tooling story.
 
-### Task runner recipes vs external scripts
+## Task runner recipes vs external scripts
 
 Task runners (mise tasks, Make, just, …) are the **menu and wiring**:
 name the work, pass flags, compose dependencies.
 They are not a place to bury non-trivial shell or application logic inside TOML/Make by default.
 
-#### Inline in the task runner
+### Inline in the task runner
 
 Keep the recipe **in the task definition** only when it is a **series of simple one-liner commands** (or a meta-task), for example:
 
@@ -109,7 +109,7 @@ run = [
 
 No variables, pipelines, `find`, loops, or multi-branch control flow in the task body.
 
-#### Put it in a script (e.g. `.tasks/`)
+### Put it in a script (e.g. `.tasks/`)
 
 Extract a file when **any** of these hold:
 
@@ -137,13 +137,13 @@ run = "python .tasks/devpod.py up"
 Language of the script is whatever fits (Python, bash, …).
 Prefer readability over matching the task runner’s config language.
 
-#### Do not
+### Do not
 
 - Embed multi-line bash programs inside `mise.toml` / Make when a `.tasks/` file would be clearer
 - Add a script that only wraps **one** simple CLI with no shared logic (`subprocess` → `hk check --all` and nothing else)
 - Grow a private framework under `.tasks/` when the runner can compose tasks (`depends`, `mise run a ::: b`)
 
-#### How to choose
+### How to choose
 
 1. Can it be **only** simple one-liners (or depends/alias)?
    → **inline**.
@@ -154,7 +154,7 @@ Prefer readability over matching the task runner’s config language.
 Bootstrap scripts that run **before** the tool manager exists (POSIX host checks) are a separate layer from task-runner recipes;
 do not force them into the same language or folder conventions as post-mise tasks.
 
-### What agents should do
+## What agents should do
 
 1. When adding or editing tooling config:
    keep files **content-focused**.

@@ -1,3 +1,5 @@
+# Agent guidelines
+
 This is a repository meant to be read by agents and provide guidelines for agentic aided work.
 
 Content is split into:
