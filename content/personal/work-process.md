@@ -183,7 +183,7 @@ Optional one-line pointer to this work-process doc.
 
 ### <short-name>
 
-One sentence. [link-to-folder/](./folder/)
+One sentence. Link the plan folder when it exists (for example `./short-name/`).
 Optional: minimal soft dependencies (a line or two).
 
 ## Backlog

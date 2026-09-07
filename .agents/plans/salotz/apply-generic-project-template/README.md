@@ -1,13 +1,13 @@
 # Apply generic project template (this repo)
 
-Dogfood [templates/generic-project.md](../../../../templates/generic-project.md) on **agent-guidelines**, migrate guideline trees under **`content/`**, and add **bootstrap → install → preload** per [project-management-and-tooling](../../../../shared/project-management-and-tooling.md#bootstrapping-a-project).
+Dogfood [templates/generic-project.md](../../../../content/templates/generic-project.md) on **agent-guidelines**, migrate guideline trees under **`content/`**, and add **bootstrap → install → preload** per [project-management-and-tooling](../../../../content/shared/project-management-and-tooling.md#bootstrapping-a-project).
 
 ## Status
 
 - Planning:
   **Q1–Q9 locked** (operator accepted 2026-09-07).
 - Execution:
-  **Phase 1 hygiene done**; next = Phase 2 `content/` migration.
+  **Phase 1 hygiene done**; **Phase 2 `content/` migration done**; next = Phase 3 PRJX.
 
 ## Goals
 
@@ -36,7 +36,7 @@ Dogfood [templates/generic-project.md](../../../../templates/generic-project.md)
 6. Blob ADR
 7. Validate + commit slices
 
-Decision ids use **`Q*`** per [work-process](../../../../personal/work-process.md).
+Decision ids use **`Q*`** per [work-process](../../../../content/personal/work-process.md).
 
 ## After each execution step
 

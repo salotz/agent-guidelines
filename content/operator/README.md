@@ -24,4 +24,4 @@ not for agents to execute as standing work rules.
 2. Follow [implementing-sandbox.md](./implementing-sandbox.md) when bringing up or hardening a host.
 3. Keep durable *decisions* for a specific host config repo in ADRs under that repo’s `design/decisions/` (see [salotz RFC 22](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.022_ai-coding-structure) ([summary](../shared/summaries/salotz-rfc-022-ai-coding-structure.md))).
    These operator docs stay generic enough to reimplement elsewhere.
-4. Keep agent bootloaders (`AGENTS.md`, `~/.agents/AGENTS.md`) pointed at `shared/` / `personal/` unless you intentionally want an agent to implement sandboxing work from this tree.
+4. Keep agent bootloaders (`AGENTS.md`, `~/.agents/AGENTS.md`) pointed at the shared / personal guideline sets (in this repo: `content/shared/` / `content/personal/`) unless you intentionally want an agent to implement sandboxing work from the operator tree.

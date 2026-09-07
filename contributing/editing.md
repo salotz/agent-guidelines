@@ -15,16 +15,16 @@ Larger changes should request input from the author.
 
 Is the usage of terms and guidelines consistent with each other?
 
-Are there terms that should be defined in the [shared glossary](../shared/glossary.md)?
-New or edited glossary entries must follow [salotz RFC 29](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md) ([summary](../shared/summaries/salotz-rfc-029-glossary-format.md)).
+Are there terms that should be defined in the [shared glossary](../content/shared/glossary.md)?
+New or edited glossary entries must follow [salotz RFC 29](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md) ([summary](../content/shared/summaries/salotz-rfc-029-glossary-format.md)).
 
-Is portable guidance under `shared/` and host-specific guidance under `personal/`?
+In **this** repository, portable guidance lives under `content/shared/` and host-specific guidance under `content/personal/` (vocabulary: “shared” / “personal”).
 
 Is **human operator** guidance (sandboxing how-to,
-host hardening patterns) under `operator/`,
+host hardening patterns) under `content/operator/`,
 with a local table of contents —
 not mixed into agent bootloaders?
 
-Do new cross-cutting shared topics get their own `shared/*.md` file plus a thin hub link (for example from `generic-agent-guidelines.md` and `README.md`), instead of bloating the generic hub?
+Do new cross-cutting shared topics get their own `content/shared/*.md` file plus a thin hub link (for example from `generic-agent-guidelines.md` and the root `README.md`), instead of bloating the generic hub?
 
-Do new operator topics get a sibling `operator/*.md` plus links from `operator/README.md` and the root `README.md`?
+Do new operator topics get a sibling `content/operator/*.md` plus links from `content/operator/README.md` and the root `README.md`?

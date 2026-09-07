@@ -106,7 +106,7 @@ When host context from step 1 is in session:
 1. Apply **shared** guidelines as the portable baseline.
 2. Apply **personal** guidelines for host paths,
    shell/Bimker, installs, and personal skills.
-3. Read full docs under `personal/` and `shared/` as the task requires instead of asking the operator to restate standing preferences.
+3. Read full docs under `content/personal/` and `content/shared/` as the task requires instead of asking the operator to restate standing preferences.
 
 ## 5. Project vs host
 

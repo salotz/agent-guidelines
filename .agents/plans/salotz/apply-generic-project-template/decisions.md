@@ -3,7 +3,7 @@
 Single inbox for operator↔agent prompts on this plan.
 Plan-local ids only (`Q1`, `Q2`, …) — do not cite these in durable repo docs; promote lasting choices to ADRs at close-out.
 
-Process: [personal/work-process.md](../../../../personal/work-process.md) (Q-record shape).
+Process: [personal/work-process.md](../../../../content/personal/work-process.md) (Q-record shape).
 
 ## Open queue
 

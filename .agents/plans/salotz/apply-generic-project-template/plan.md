@@ -4,7 +4,7 @@
 
 Repository: **agent-guidelines** (reflective guidelines repo).
 
-Apply [templates/generic-project.md](../../../../templates/generic-project.md) (path becomes `content/templates/generic-project.md` after Phase 2).
+Apply [templates/generic-project.md](../../../../content/templates/generic-project.md) (path becomes `content/templates/generic-project.md` after Phase 2).
 
 Also migrate the four guideline trees into one parent:
 
@@ -18,7 +18,7 @@ Also migrate the four guideline trees into one parent:
 Root remains the **project control plane**: git, PRJX, **`.bootstrap/`**, mise/hk, EditorConfig, `AGENTS.md`, `README.md`, `LICENSE`, `contributing/`, `.agents/`, and (new) `design/`.
 
 Normative bootstrap/preload behavior is defined in
-[shared/project-management-and-tooling.md](../../../../shared/project-management-and-tooling.md#bootstrapping-a-project)
+[shared/project-management-and-tooling.md](../../../../content/shared/project-management-and-tooling.md#bootstrapping-a-project)
 (edited/collated in this planning pass). Live shape reference: examol `ops` (`.bootstrap/`, `mise run preload` → hooks ± env).
 
 ---
@@ -291,7 +291,7 @@ Agent does not commit unless asked.
 
 ## Execution protocol
 
-Per [personal/work-process.md](../../../../personal/work-process.md):
+Per [personal/work-process.md](../../../../content/personal/work-process.md):
 
 - One step at a time on “go” / “execute next step”.
 - No commits unless asked.

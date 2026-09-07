@@ -9,7 +9,7 @@ Safe to import into projects and share with others.
   initialize a project with these guidelines
 - [agents_md_template.md](./agents_md_template.md):
   drop-in bootloader for project `AGENTS.md`
-- Opinionated stacks (sibling tree):
+- Opinionated stacks (sibling under `content/`):
   [../templates/](../templates/) —
   [generic project](../templates/generic-project.md)
 - [Generic Agent Guidelines](./generic-agent-guidelines.md):

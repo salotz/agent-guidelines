@@ -12,11 +12,12 @@ For concrete tool and layout choices (git, mise, hk, EditorConfig, PRJX, RFC 22 
 
 ## Shared vs personal
 
-- **Shared** (`shared/`):
+- **Shared** (portable set; in this repo: `content/shared/`):
   portable guidelines for any project.
   Use these by default.
-- **Personal** (`personal/`):
+- **Personal** (operator/host set; in this repo: `content/personal/`):
   operator host and configuration rules.
   Load only when that context applies.
 
-Projects that only need portable rules should reference `shared/` (or an equivalent checkout of it).
+Projects that only need portable rules should reference the shared tree (or an equivalent checkout of it).
+When pointing at **this** guidelines repository, use paths under `content/shared/`.

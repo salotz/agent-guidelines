@@ -24,12 +24,12 @@ Do not put operator answers here (use [decisions.md](./decisions.md)).
 
 ## Phase 2 — `content/` migration
 
-- [ ] Create `content/`
-- [ ] `git mv` four trees → `content/`
-- [ ] Rewrite links (root, contributing, intra-tree verify, plan tree)
-- [ ] Hubs: `README.md`, `AGENTS.md`
-- [ ] Stubs per Q3
-- [ ] Link existence check green
+- [x] Create `content/`
+- [x] `git mv` four trees → `content/`
+- [x] Rewrite links (root, contributing, intra-tree verify, plan tree)
+- [x] Hubs: `README.md`, `AGENTS.md`
+- [x] Stubs per Q3 (none)
+- [x] Link existence check green (tracked docs; ignore `.agent-shell/`)
 
 ## Phase 3 — PRJX
 
