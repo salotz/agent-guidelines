@@ -70,3 +70,9 @@ Opinionated, concrete stacks (not a cookiecutter/copier generator):
 ## Maintaining this repo
 
 See [contributing/](./contributing/) for roles and workflows used to maintain this repository (not part of the portable shared set).
+
+**Developing this checkout** (bootstrap, mise, hooks, checks):
+[contributing/development.md](./contributing/development.md).
+
+**Design / ADRs**:
+[design/](./design/).

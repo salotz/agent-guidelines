@@ -60,8 +60,8 @@ Do not put operator answers here (use [decisions.md](./decisions.md)).
 
 ## Phase 6 — Blobs
 
-- [ ] ADR: no DVC yet
-- [ ] Mention in goals / development
+- [x] ADR: no DVC yet ([design/decisions/004-no-blob-tooling-yet.md](../../../../design/decisions/004-no-blob-tooling-yet.md))
+- [x] Mention in goals / development
 
 ## Phase 7 — Validate
 

@@ -2,7 +2,7 @@
 
 This is a repository meant to be read by agents and provide guidelines for agentic aided work.
 
-Guideline substance lives under **`content/`**:
+## Guideline substance (`content/`)
 
 - [shared/](./content/shared/):
   portable guidelines for import into projects
@@ -22,23 +22,29 @@ Also load personal guidelines when interacting with this operator's host,
 shell configuration, or personal skills.
 When the task is designing or reproducing agent CLI sandboxing on a host, read `content/operator/`.
 
-See the [contributing](./contributing/) directory for roles and workflows to run when maintaining this repository.
+## This repository (control plane)
 
-The file [shared/agents_md_template.md](./content/shared/agents_md_template.md) is a pre-generated context to put into your projects.
+- [contributing/](./contributing/):
+  maintainer roles — start with [development.md](./contributing/development.md) (bootstrap → preload → check)
+- [design/](./design/):
+  goals and ADRs for this repo
+- [`.agents/`](./.agents/):
+  plans, [repo map](./.agents/context/repo-map.md), optional skills
+- Tooling:
+  `.bootstrap/`, `mise.toml`, `hk.pkl`, `.editorconfig`, PRJX (`.prjx-root`, `.config/`)
 
-The file [personal/agents_md_template.md](./content/personal/agents_md_template.md) is a pre-generated context to put into host-local agent config (`~/.agents/AGENTS.md`).
-Agent harnesses may need a separate pointer (e.g. goose:
-`~/.config/goose/AGENTS.md`).
-See [personal/getting-started.md](./content/personal/getting-started.md).
+## Drop-in bootloaders (for other projects / hosts)
 
-The [shared/summaries](./content/shared/summaries) folder contains compacted summaries of externally referenced resources.
-Check here before reading the referenced resource.
+- Project: [shared/agents_md_template.md](./content/shared/agents_md_template.md)
+- Host: [personal/agents_md_template.md](./content/personal/agents_md_template.md)
+  (see [personal/getting-started.md](./content/personal/getting-started.md); harness pointer e.g. `~/.config/goose/AGENTS.md`)
 
-Shared topic docs under [content/shared/](./content/shared/) are independently referenceable (for example [project-management-and-tooling.md](./content/shared/project-management-and-tooling.md) and [blob-management.md](./content/shared/blob-management.md)).
+## Reference aids
 
-Concrete opinionated stacks live under [content/templates/](./content/templates/) (start with [generic-project.md](./content/templates/generic-project.md)).
-
-Personal skills live under [content/personal/skills/](./content/personal/skills/).
-Shared skills live under [content/shared/skills/](./content/shared/skills/).
+- Compacted external summaries: [content/shared/summaries](./content/shared/summaries)
+- Glossary: [content/shared/glossary.md](./content/shared/glossary.md)
+- Topic examples: [project-management-and-tooling.md](./content/shared/project-management-and-tooling.md), [blob-management.md](./content/shared/blob-management.md)
+- Generic stack: [content/templates/generic-project.md](./content/templates/generic-project.md)
+- Skills: [content/personal/skills/](./content/personal/skills/), [content/shared/skills/](./content/shared/skills/)
 
 This project is "reflective" in the sense that it should follow its own guidelines.
