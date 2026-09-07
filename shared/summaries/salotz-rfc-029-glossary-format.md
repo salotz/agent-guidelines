@@ -1,22 +1,28 @@
 # Summary: salotz RFC 29 - Glossary Format
 
-Source: https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md
+Source:
+https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md
 
 ## Purpose
 
-Normative Markdown format for glossaries, extracted from RFC 22 for reuse in
-projects, RFCs, and shared guideline repos.
+Normative Markdown format for glossaries,
+extracted from RFC 22 for reuse in projects, RFCs, and shared guideline repos.
 
 ## Format
 
-- File name: `glossary.md` unless a consuming standard says otherwise
-- Title: `# Glossary`
+- File name:
+  `glossary.md` unless a consuming standard says otherwise
+- Title:
+  `# Glossary`
 - One term per `## term` subheading (heading text is the canonical term)
 - Short definition body under each heading
 - Cross-link related terms with in-document anchors (`[other](#other)`)
 - Do **not** use a table as the sole glossary structure (anchors/cross-links)
-- Aliases: mention in the body; optional redirect headings if needed
-- Order: free (alphabetical or thematic)
+- Aliases:
+  mention in the body;
+  optional redirect headings if needed
+- Order:
+  free (alphabetical or thematic)
 
 ## Placement (informative)
 

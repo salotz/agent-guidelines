@@ -1,9 +1,11 @@
 # Summary: salotz RFC 23 - Local Agent Context
 
-Source: https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context
+Source:
+https://github.com/salotz/rfcs/tree/master/rfcs/salotz.023_local-agent-context
 
 ## Purpose
-Standard for local (host-specific) agent context injection, separate from remote git repo context. Enables operator preferences for installs, tools, shell, etc.
+Standard for local (host-specific) agent context injection, separate from remote git repo context.
+Enables operator preferences for installs, tools, shell, etc.
 
 ## Configuration Locations (precedence order)
 1. `$XDG_CONFIG_HOME/agents` (e.g. `~/.config/agents`)
@@ -24,7 +26,8 @@ Use `xagents` subdir under extended XDG locations (e.g. `~/.cache/xagents`, `~/.
 
 ## Precedence & Behavior
 - Closest local context wins.
-- On contradictions: explicitly ask operator for feedback before acting.
+- On contradictions:
+  explicitly ask operator for feedback before acting.
 - Chain references upward in repo context files.
 
 ## Recommended Home Structure

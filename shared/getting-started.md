@@ -8,7 +8,11 @@ There is a file [agents_md_template.md](./agents_md_template.md) which provides 
 
 ## Shared vs personal
 
-- **Shared** (`shared/`): portable guidelines for any project. Use these by default.
-- **Personal** (`personal/`): operator host and configuration rules. Load only when that context applies.
+- **Shared** (`shared/`):
+  portable guidelines for any project.
+  Use these by default.
+- **Personal** (`personal/`):
+  operator host and configuration rules.
+  Load only when that context applies.
 
 Projects that only need portable rules should reference `shared/` (or an equivalent checkout of it).

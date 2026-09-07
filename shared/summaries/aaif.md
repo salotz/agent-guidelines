@@ -1,6 +1,7 @@
 # Summary: Agentic AI Foundation (AAIF)
 
-Source: https://aaif.io/
+Source:
+https://aaif.io/
 
 ## Overview
 AAIF focuses on operationalizing agentic AI for enterprise scale through standards, governance, and community projects.

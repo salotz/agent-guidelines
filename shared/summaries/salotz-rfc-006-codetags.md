@@ -1,11 +1,18 @@
 # Summary: salotz RFC 6 - Codetags
 
-Source: https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags
+Source:
+https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags
 
 ## Purpose
-Standardize "codetags" — specially formatted comment tags (e.g. `TODO`, `FIXME`) added to source code to give semantic, searchable meaning beyond freeform comments. Makes comments machine-readable for tooling.
+Standardize "codetags" —
+specially formatted comment tags (e.g. `TODO`,
+`FIXME`) added to source code to give semantic,
+searchable meaning beyond freeform comments.
+Makes comments machine-readable for tooling.
 
-Draws from PEP 350 and similar efforts. The format is more important than the exact tag set; the provided tags are "sane defaults".
+Draws from PEP 350 and similar efforts.
+The format is more important than the exact tag set;
+the provided tags are "sane defaults".
 
 ## Format
 - Tags appear in comments preceding the relevant code.
@@ -16,7 +23,8 @@ Draws from PEP 350 and similar efforts. The format is more important than the ex
   for i in range(10):
       print(i)
   ```
-- Tags should generally include context; bare `TODO` is discouraged.
+- Tags should generally include context;
+  bare `TODO` is discouraged.
 - Support for multi-line tags, multiple tags per comment, and parametrization:
   ```python
   # TODO(paramA, keyB=val): explanation
@@ -26,11 +34,16 @@ Draws from PEP 350 and similar efforts. The format is more important than the ex
 ## Categories and Tags
 
 ### Tasks (should not ship to production without tracking)
-- TODO — specific change item
-- FIXME — broken code needing fix
-- TOREV — flag for review
-- TODOC — needs documentation
-- REFACT — scheduled refactoring
+- TODO —
+  specific change item
+- FIXME —
+  broken code needing fix
+- TOREV —
+  flag for review
+- TODOC —
+  needs documentation
+- REFACT —
+  scheduled refactoring
 
 ### Warnings (may ship; indicate quality issues)
 - ALERT, HACK, WKRD (workaround), SMELL, UGLY, GOTCHA
@@ -55,4 +68,5 @@ Draws from PEP 350 and similar efforts. The format is more important than the ex
 - Use for machine searchability and editor highlighting (e.g. hl-todo-mode in Emacs).
 - Tags imply production-readiness rules per category.
 
-See the full RFC for detailed examples, review flow, and implementation advice (editor coloring, etc.).
+See the full RFC for detailed examples, review flow,
+and implementation advice (editor coloring, etc.).

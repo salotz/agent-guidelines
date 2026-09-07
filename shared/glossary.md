@@ -2,8 +2,8 @@
 
 This glossary defines key terms and provides cross-references between them.
 
-Format: [salotz RFC 29 (Glossary Format)](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md)
-([summary](./summaries/salotz-rfc-029-glossary-format.md)).
+Format:
+[salotz RFC 29 (Glossary Format)](https://github.com/salotz/rfcs/blob/master/rfcs/salotz.029_glossary-format.md) ([summary](./summaries/salotz-rfc-029-glossary-format.md)).
 
 ## operator
 
@@ -11,13 +11,15 @@ The human person that is controlling an agentic aided process.
 
 ## project
 
-A self-contained unit of work and content. Usually materialized as specific folder or directory on a [host system](#host-system).
+A self-contained unit of work and content.
+Usually materialized as specific folder or directory on a [host system](#host-system).
 
 Almost always a [repository](#repository), but not necessarily.
 
 ## host machine
 
-The physical device that can run [host systems](#host-system). This term refers to the hardware, not the operating system software.
+The physical device that can run [host systems](#host-system).
+This term refers to the hardware, not the operating system software.
 
 Host machines are typically named with an informal but suggestive naming scheme, the **host name**.
 
@@ -69,7 +71,8 @@ Distinguished from the system managed directories on your host (i.e. `/` in Unix
 
 Refers to agent context that lives only on a particular host.
 
-For example, for a given [host home](#host-home) this would be configuration which is not exclusively tracked remotely. I.e. contents of `~/.*` and `~/.config/*` content.
+For example, for a given [host home](#host-home) this would be configuration which is not exclusively tracked remotely.
+I.e. contents of `~/.*` and `~/.config/*` content.
 
 ## remote context
 
@@ -89,33 +92,40 @@ Tests that run in an integration environment.
 
 ## codetag
 
-A specially formatted comment tag (e.g. TODO, FIXME) placed in source code to add machine-searchable semantic meaning beyond freeform comments. Defined by [salotz RFC 6](./summaries/salotz-rfc-006-codetags.md). Operator usage rules live under [Software Guidelines — Codetags](./software-guidelines.md#codetags) and [Source Comments](./software-guidelines.md#source-comments).
+A specially formatted comment tag (e.g. TODO,
+FIXME) placed in source code to add machine-searchable semantic meaning beyond freeform comments.
+Defined by [salotz RFC 6](./summaries/salotz-rfc-006-codetags.md).
+Operator usage rules live under [Software Guidelines — Codetags](./software-guidelines.md#codetags) and [Source Comments](./software-guidelines.md#source-comments).
 
 ## Project tooling entrypoint
 
-The documented command used by humans, agents, and CI to run project tools with pinned versions and env (for example `mise exec -- …`), without requiring interactive shell activation. See [Project Management and Tooling](./project-management-and-tooling.md).
+The documented command used by humans, agents,
+and CI to run project tools with pinned versions and env (for example `mise exec -- …`),
+without requiring interactive shell activation.
+See [Project Management and Tooling](./project-management-and-tooling.md).
 
 ## task runner
 
-The project layer that exposes named recipes (the **menu and wiring**) for
-common work: run a CLI with fixed flags, chain a few one-liners, or depend on
-other recipes. Examples: mise tasks, Make, just.
+The project layer that exposes named recipes (the **menu and wiring**) for common work:
+run a CLI with fixed flags,
+chain a few one-liners, or depend on other recipes.
+Examples:
+mise tasks, Make, just.
 
-Actual task running tools often are multifunctional, including build
-systems (e.g. `make`), package or tool managers, etc. We refer to them
-as task runners only with reference to those capabilities.
+Actual task running tools often are multifunctional,
+including build systems (e.g. `make`),
+package or tool managers,
+etc. We refer to them as task runners only with reference to those capabilities.
 
 ## task
 
-One named unit of work in a [task runner](#task-runner) (for example
-`mise run validate`, a Make target, or a just recipe).
+One named unit of work in a [task runner](#task-runner) (for example `mise run validate`, a Make target, or a just recipe).
 
 ## blob
 
-Abbreviation for "binary large object". Colloquially, any file that is too
-large or opaque to handle well with a code VCS tool like git. See
-[Blob Management](./blob-management.md).
-
+Abbreviation for "binary large object".
+Colloquially, any file that is too large or opaque to handle well with a code VCS tool like git.
+See [Blob Management](./blob-management.md).
 
 ## Too much information (TMI)
 
@@ -127,28 +137,19 @@ This doesn't mean leave out important points just to cut word counts, but to opt
 
 ## agent sandbox
 
-A host-level confinement around an agent process tree (typically filesystem
-path allowlists via Landlock helpers such as landrun, plus reduced `PATH` and
-env allowlists) so the default agent CLI entrypoint cannot read or write
-arbitrary locations under the [operator](#operator)'s
-[host home](#host-home).
+A host-level confinement around an agent process tree (typically filesystem path allowlists via Landlock helpers such as landrun,
+plus reduced `PATH` and env allowlists) so the default agent CLI entrypoint cannot read or write arbitrary locations under the [operator](#operator)'s [host home](#host-home).
 
 Distinct from application-level tool permissions inside the agent product.
-Operator design and implementation guidance lives under
-[operator/sandboxing.md](../operator/sandboxing.md) and
-[operator/implementing-sandbox.md](../operator/implementing-sandbox.md).
+Operator design and implementation guidance lives under [operator/sandboxing.md](../operator/sandboxing.md) and [operator/implementing-sandbox.md](../operator/implementing-sandbox.md).
 
 ## sandboxed entrypoint
 
-The default command name on `PATH` for an agent CLI (for example `goose`)
-that resolves to a wrapper applying an [agent sandbox](#agent-sandbox), not
-to the upstream binary. The real binary should live off `PATH` under extended
-XDG opt ([RFC 24](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)).
+The default command name on `PATH` for an agent CLI (for example `goose`) that resolves to a wrapper applying an [agent sandbox](#agent-sandbox), not to the upstream binary.
+The real binary should live off `PATH` under extended XDG opt ([RFC 24](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)).
 
 ## unsandboxed entrypoint
 
-An explicitly named bypass command (for example `goose-unsandboxed`) that
-runs the real agent binary with full user privileges and should warn loudly
-on stderr. Used when a workflow cannot run inside the
-[agent sandbox](#agent-sandbox); prefer widening sandbox mounts when only path
-access is missing.
+An explicitly named bypass command (for example `goose-unsandboxed`) that runs the real agent binary with full user privileges and should warn loudly on stderr.
+Used when a workflow cannot run inside the [agent sandbox](#agent-sandbox);
+prefer widening sandbox mounts when only path access is missing.

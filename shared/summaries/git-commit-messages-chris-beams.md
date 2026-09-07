@@ -1,6 +1,7 @@
 # Summary: How to Write a Git Commit Message (chris.beams.io)
 
-Source: https://chris.beams.io/git-commit (also at https://cbea.ms/git-commit/)
+Source:
+https://chris.beams.io/git-commit (also at https://cbea.ms/git-commit/)
 
 ## Key Advice (The Seven Rules)
 
@@ -31,6 +32,7 @@ See also: #456
 ## Additional Tips
 - Prefer command line over IDE for Git operations.
 - Keep commits atomic when possible.
-- The subject should complete the sentence: "If applied, this commit will <subject>"
+- The subject should complete the sentence:
+  "If applied, this commit will <subject>"
 
 This summary should be used when writing or reviewing commit messages.

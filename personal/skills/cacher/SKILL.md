@@ -38,7 +38,8 @@ The script will:
 1. Parse the repo reference into host/org/repo.
 2. Clone if missing.
 3. Reuse existing checkout if present.
-4. Fetch from `origin` when stale (default interval: 300s).
+4. Fetch from `origin` when stale (default interval:
+   300s).
 5. Attempt a fast-forward merge if the checkout is clean and has an upstream.
 
 ## Update strategy
@@ -54,11 +55,13 @@ bash checkout.sh <repo> --force-update --path-only
 
 1. Resolve repository path via `checkout.sh --path-only`.
 2. Use that path for searching, reading, and analysis.
-3. On later references to the same repo, call `checkout.sh` again; it will find and update the cached checkout.
+3. On later references to the same repo, call `checkout.sh` again;
+   it will find and update the cached checkout.
 
 ## If edits are needed
 
-Prefer not to edit directly in the shared cache. Create a separate worktree or copy from the cached checkout for task-specific modifications.
+Prefer not to edit directly in the shared cache.
+Create a separate worktree or copy from the cached checkout for task-specific modifications.
 
 ## Notes
 

@@ -1,9 +1,12 @@
 # Summary: salotz RFCs
 
-Source: https://github.com/salotz/rfcs
+Source:
+https://github.com/salotz/rfcs
 
 ## Overview
-Personal collection of RFCs (Requests for Comments) by salotz covering coding structure, agent context, naming, git practices, and related topics.
+Personal collection of RFCs (Requests for Comments) by salotz covering coding structure,
+agent context,
+naming, git practices, and related topics.
 
 These RFCs are referenced throughout the agent-guidelines as the source of personal standards for:
 - Project/AI coding structure (RFC 22)

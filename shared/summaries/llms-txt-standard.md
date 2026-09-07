@@ -1,12 +1,15 @@
 # Summary: llms.txt Standard
 
-Source: https://llmstxt.org/
+Source:
+https://llmstxt.org/
 
 ## Purpose
-Proposal to standardize a `/llms.txt` markdown file at the root of websites (or subpaths) to provide concise, LLM-friendly information for use at inference time.
+Proposal to standardize a `/llms.txt` markdown file at the root of websites (or subpaths) to provide concise,
+LLM-friendly information for use at inference time.
 
 ## Background
-- Full websites are hard for LLMs: large HTML, navigation, ads, JS.
+- Full websites are hard for LLMs:
+  large HTML, navigation, ads, JS.
 - Context windows are limited.
 - Need curated, expert-level, plain-text content in one place.
 
