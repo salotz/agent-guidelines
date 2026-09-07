@@ -22,10 +22,13 @@ When working on projects, agents should obey [salotz RFC 22](https://github.com/
 
 For in-repo tooling contracts, content-focused config files,
 layered tool roles,
+[project bootstrapping](./glossary.md#project-bootstrapping) (`.bootstrap/`),
+[preload](./glossary.md#preload),
 and project automation vs operator shell activation, see [Project Management and Tooling](./project-management-and-tooling.md).
 
 Host installs still require operator confirmation and integration planning;
 see that document and [Host System Interaction](#host-system-interaction).
+Respect bootstrap → project install → preload order when a project defines those stages.
 
 ## Blob Management
 

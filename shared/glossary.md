@@ -106,9 +106,23 @@ See also the [generic project template](../templates/generic-project.md).
 ## Project tooling entrypoint
 
 The documented command used by humans, agents,
-and CI to run project tools with pinned versions and env (for example `mise exec -- …`),
+and CI to run project tools with pinned versions and env (for example `mise exec -- …` or `mise run <task>`),
 without requiring interactive shell activation.
 See [Project Management and Tooling](./project-management-and-tooling.md).
+
+## project bootstrapping
+
+The stage from “operator has a project replica” until **host** prerequisites are met so project-managed tools can run.
+Materials live under `.bootstrap/` (portable POSIX checks such as `host-tool-check` + `host-tools.conf`).
+Distinct from installing project pins (`mise install`) and from [preload](#preload).
+See [Bootstrapping a project](./project-management-and-tooling.md#bootstrapping-a-project).
+
+## preload
+
+A [task runner](#task-runner) task named exactly `preload` that **initializes a checkout** after host bootstrap and project tool install (for example `hk install`, language env sync).
+Invoked like `mise run preload`.
+Must not replace host bootstrap.
+See [Preload (post-bootstrap)](./project-management-and-tooling.md#preload-post-bootstrap).
 
 ## task runner
 

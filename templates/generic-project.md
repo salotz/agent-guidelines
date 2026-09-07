@@ -22,9 +22,23 @@ Follow the guidelines on writing tasks longer than one-liners in [Project manage
 
 Use [Python](https://www.python.org/) for writing anything more complicated than a one-liner, as opposed to bash, to enable testing and code quality.
 
+## Bootstrap and preload
+
+Follow [Bootstrapping a project](../shared/project-management-and-tooling.md#bootstrapping-a-project):
+
+1. **`.bootstrap/`** —
+   portable POSIX `host-tool-check` + `host-tools.conf` (required host tools typically include `git` and `mise`; optional host integrations as needed).
+2. **`mise install`** —
+   project pins from `mise.toml`.
+3. **`mise run preload`** —
+   checkout initialization after pins exist (this template: install [hk](https://hk.jdx.dev/) ([summary](../shared/summaries/hk.md)) hooks; add language env sync only when the project has that stack).
+
+Document the flow in `contributing/` (for example development or onboarding).
+
 ## Git hooks manager
 
 Use [hk](https://hk.jdx.dev/) ([summary](../shared/summaries/hk.md)) for managing and running git hooks.
+Install hooks from **`preload`** (not a separate ad-hoc “setup” task name), for example `hk install` inside the preload script or as a one-liner when that is all preload does.
 
 ## EditorConfig
 

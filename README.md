@@ -23,7 +23,7 @@ See the [shared glossary](./shared/glossary.md) for definition of specific terms
 - [Generic Agent Guidelines](./shared/generic-agent-guidelines.md):
   Generic advice for any agent-assisted work.
 - [Project Management and Tooling](./shared/project-management-and-tooling.md):
-  Config-file style, layered tooling, and how automation invokes tools.
+  Config-file style, layered tooling, bootstrap/preload, and how automation invokes tools.
 - [Software](./shared/software-guidelines.md):
   Guidelines specific to the authorship and maintenance of software projects.
 - [Blob Management](./shared/blob-management.md):
