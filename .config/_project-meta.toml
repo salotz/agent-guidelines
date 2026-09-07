@@ -1,0 +1,7 @@
+# Portable PRJX project metadata (salotz RFC 28).
+# Host/replica overrides: .local/_config.toml (gitignored; deep-merged).
+# FQ project name => salotz.agent-guidelines
+
+[project]
+name = "agent-guidelines"
+namespace = "salotz"

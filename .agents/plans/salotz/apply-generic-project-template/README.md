@@ -7,7 +7,7 @@ Dogfood [templates/generic-project.md](../../../../content/templates/generic-pro
 - Planning:
   **Q1–Q9 locked** (operator accepted 2026-09-07).
 - Execution:
-  **Phase 1 hygiene done**; **Phase 2 `content/` migration done**; next = Phase 3 PRJX.
+  **Phase 1–3 done** (hygiene, `content/` migration, PRJX); next = Phase 4 bootstrap + mise + hk + preload.
 
 ## Goals
 

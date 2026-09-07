@@ -33,9 +33,9 @@ Do not put operator answers here (use [decisions.md](./decisions.md)).
 
 ## Phase 3 — PRJX
 
-- [ ] `.prjx-root`
-- [ ] `.config/_project-meta.toml` (Q1)
-- [ ] `.local/` gitignored
+- [x] `.prjx-root`
+- [x] `.config/_project-meta.toml` (Q1)
+- [x] `.local/` gitignored
 
 ## Phase 4 — Bootstrap + mise + hk + preload
 
