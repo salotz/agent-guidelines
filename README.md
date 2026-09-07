@@ -33,6 +33,8 @@ documents.
 - [Blob Management](./shared/blob-management.md): Large or opaque files
   managed alongside repository history (prefer DVC over git-lfs for new
   projects).
+- [Markdown style guide](./shared/markdown-style-guide.md): GFM dialect,
+  wrapping, fences, tables, and related formatting rules.
 - [Technical Writing](./shared/technical-writing.md): Guidelines for
   technical writing meant for a non-personal audience.
 - [Writing Contributor Documentation](./shared/writing-contributing.md):

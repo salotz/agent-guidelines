@@ -11,6 +11,7 @@ and share with others.
 - [Project Management and Tooling](./project-management-and-tooling.md): config-file style, layered tooling, automation vs shell
 - [Software](./software-guidelines.md): authorship and maintenance of software projects
 - [Blob Management](./blob-management.md): large/opaque files alongside VCS history (prefer DVC over git-lfs for new projects)
+- [Markdown style guide](./markdown-style-guide.md): GFM dialect, wrapping, fences, tables
 - [Technical Writing](./technical-writing.md): writing for a non-personal audience
 - [Writing Contributor Documentation](./writing-contributing.md): contributor-facing docs (style guide exceptions, don't restate upstream)
 - [Research](./research.md): research work

@@ -11,13 +11,29 @@ For documentation aimed at project contributors (for example under
 `contributing/`), see
 [Writing Contributor Documentation](./writing-contributing.md).
 
+## Formats
+
+The default format for technical writing is Markdown.
+Other systems are acceptable when presentation needs go beyond what Markdown
+can provide; those choices are project-specific.
+
+Examples include [Markdoc](https://markdoc.dev/),
+[Skribilo](https://www.nongnu.org/skribilo/), and
+[Pollen](https://docs.racket-lang.org/pollen/).
+
+Guidance here is generic and usually uses Markdown examples, though other
+formats may appear as well.
+
+See the format-specific style guides — for Markdown,
+[Markdown style guide](./markdown-style-guide.md).
+
 ## When to use tables
 
 Do not use tables for verbose prose even if a tabular format makes sense
 abstractly.
 
-Humans have a hard time reading and editing tables with lots of content
-in plain-text formats like Markdown.
+Humans have a hard time reading and editing tables with lots of content in plain-text formats like Markdown.
+Even formatted tables in web pages with lots of prose can be difficult to read.
 
 Instead, favor sub-sections with headers for complex multi-column
 information.

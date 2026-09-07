@@ -1,8 +1,13 @@
-# Operator Guidelines
+# Operator guidelines
 
 These documents are written for the **[operator](../shared/glossary.md#operator)** —
 the human who installs, configures, and supervises agent systems — not for
 agents to execute as standing work rules.
+
+## Table of contents
+
+1. [Documents](#documents)
+2. [How to use these guidelines](#how-to-use-these-guidelines)
 
 ## Documents
 

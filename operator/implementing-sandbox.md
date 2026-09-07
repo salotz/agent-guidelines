@@ -1,4 +1,4 @@
-# Implementing a Sandboxed Agent CLI
+# Implementing a sandboxed agent CLI
 
 This is the **how** companion to [Sandboxing agents](./sandboxing.md). Follow
 it when you want the same control shape on your own host, whether or not you

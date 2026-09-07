@@ -1,4 +1,4 @@
-# Sandboxing Agents
+# Sandboxing agents
 
 Guidance for operators who want agent tooling (goose and similar) to run
 with **filesystem isolation by default**, without chasing every caller that
@@ -115,7 +115,7 @@ ${XDGX_OPT_HOME:-~/.local/opt}/<product>/bin/<binary>
 Never link that executable onto `PATH` as the default command. PATH entries
 should be **wrappers** (or symlinks to wrappers) you control.
 
-### 3. Explicit dual entrypoints
+### 3. Explicit entrypoints
 
 | Entrypoint                           | Behavior                            |
 |--------------------------------------|-------------------------------------|

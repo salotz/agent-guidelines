@@ -52,6 +52,9 @@ branching, tests), see [Software Guidelines](./software-guidelines.md).
 
 ## Writing
 
+For Markdown dialect and formatting rules, see
+[Markdown style guide](./markdown-style-guide.md).
+
 For technical writing aimed at a non-personal audience, see
 [Technical Writing](./technical-writing.md).
 
@@ -231,35 +234,9 @@ For documents that are meant primarily for human-to-agent (H2A) and
 human-to-human-via-plaintext (H2H-plain) communication, they should use
 Markdown.
 
-Specifically,
-[GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/) as specified
-by the spec.
+See the [Markdown style guide](./markdown-style-guide.md) for Markdown
+dialect, wrapping, fences, tables, and related rules.
 
-Current renderer features on [github.com](https://github.com) that are not in
-the spec should not be used for these documents.
+See the [Technical writing guidelines](./technical-writing.md) for broader
+writing preferences that partially apply to agent communication.
 
-### Style
-
-- Do not use
-  [setext style headings](https://github.github.com/gfm/#setext-headings)
-- Only use `---` style
-  [thematic breaks](https://github.github.com/gfm/#thematic-breaks)
-
-#### Code fences
-
-Always set a language tag on fenced code blocks. Never open a fence with only
-three backticks and no language info string unless there really is no better
-option.
-
-For **shell commands** (including CLI invocations the reader would run in a
-terminal), use one of:
-
-| Tag | Use |
-| --- | --- |
-| `sh` | Portable POSIX-oriented examples (default for this repo) |
-| `bash` | Bash-specific syntax (`[[ ]]`, arrays, bashisms) |
-| `console` | Mixed prompt + command + sample output sessions |
-
-Do **not** mark runnable shell with `text`. Reserve `text` for diagrams, trees,
-non-executable snippets, and plain prose samples. Use `yaml`, `json`, `python`,
-etc. when the fence is that language.
