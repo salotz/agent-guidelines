@@ -48,6 +48,14 @@ For humans who install and supervise agents on a host (not agent bootloaders):
 - [Implementing a sandboxed agent CLI](./operator/implementing-sandbox.md):
   reproduce the landrun + opt + PATH wrapper pattern on your own machine.
 
+## Templates
+
+Opinionated, concrete stacks (not a cookiecutter/copier generator):
+
+- [Templates hub](./templates/README.md)
+- [Generic project template](./templates/generic-project.md):
+  git, mise, hk, EditorConfig, PRJX, RFC 22 agent layout, blob defaults
+
 ## Getting Started
 
 - Projects:

@@ -28,3 +28,8 @@ Summaries live in [shared/summaries](../shared/summaries).
   configure harness pointers as in [personal/getting-started.md](../personal/getting-started.md).
 
 Keep both up to date when guidelines change.
+
+## Opinionated project templates
+
+Specification-style stacks (not generator engines) live under [templates/](../templates/).
+When those docs gain or change external references, collate summaries the same way as for `shared/` prose and link them at the reference site.

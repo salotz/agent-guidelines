@@ -97,6 +97,12 @@ FIXME) placed in source code to add machine-searchable semantic meaning beyond f
 Defined by [salotz RFC 6](./summaries/salotz-rfc-006-codetags.md).
 Operator usage rules live under [Software Guidelines — Codetags](./software-guidelines.md#codetags) and [Source Comments](./software-guidelines.md#source-comments).
 
+## PRJX
+
+Project Spec Extended ([salotz RFC 28](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.028_prjx) ([summary](./summaries/salotz-rfc-028-prjx.md))).
+Conventions for discovering a [project](#project) root (`.prjx-root` / `PRJX_ROOT`), portable `.config` vs host-local `.local` trees, project metadata (`_project-meta.toml`), replica identity, and related env naming (`PRJX__…`).
+See also the [generic project template](../templates/generic-project.md).
+
 ## Project tooling entrypoint
 
 The documented command used by humans, agents,

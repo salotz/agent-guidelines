@@ -94,7 +94,7 @@ See guidance on project organization for how to handle this.
 
 Local viewers and code editors may need special support for handling link paths in this manner and not treating them as the actual host root.
 
-<!-- TODO: Create an accessory guide with tips on configuring code editors on how to reconfigure themselves for this practice. Use the PRJX standard for identifying project roots. -->
+<!-- TODO: Create an accessory guide with tips on configuring code editors on how to reconfigure themselves for this practice. Use the PRJX standard (shared/summaries/salotz-rfc-028-prjx.md) for identifying project roots. -->
 
 ### Reference links
 

@@ -36,9 +36,10 @@ projects choose stacks.
 
 | Layer | Role | Examples |
 |-------|------|----------|
-| Tool / version manager | Pin and install **host CLIs**; optional project env vars | mise, asdf, devbox |
+| Tool / version manager | Pin and install **host CLIs**; optional project env vars | [mise](https://mise.jdx.dev/) ([summary](./summaries/mise.md)), asdf, devbox |
 | Language package manager | Project dependencies, lockfiles, build/publish | uv, npm, cargo |
-| Task runner | Thin recipes only — not a second package manager | just, make |
+| Task runner | Thin recipes only — not a second package manager | mise tasks, just, make |
+| Git hooks / project checks | Shared lint/format steps in hooks and CI | [hk](https://hk.jdx.dev/) ([summary](./summaries/hk.md)) |
 | Build backend | Packaging metadata and build — not env management | hatchling, setuptools |
 
 ## Invocation: project automation vs operator shell
