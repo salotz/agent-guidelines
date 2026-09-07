@@ -20,4 +20,11 @@ New or edited glossary entries must follow
 
 Is portable guidance under `shared/` and host-specific guidance under `personal/`?
 
+Is **human operator** guidance (sandboxing how-to, host hardening patterns)
+under `operator/`, with a local table of contents — not mixed into agent
+bootloaders?
+
 Do new cross-cutting shared topics get their own `shared/*.md` file plus a thin hub link (for example from `generic-agent-guidelines.md` and `README.md`), instead of bloating the generic hub?
+
+Do new operator topics get a sibling `operator/*.md` plus links from
+`operator/README.md` and the root `README.md`?

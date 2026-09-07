@@ -124,3 +124,31 @@ An observation that something is too verbose and providing information or contex
 An operator may simply express "TMI" to an agent and the agent should then attempt to be more focused.
 
 This doesn't mean leave out important points just to cut word counts, but to optimize for limited attention.
+
+## agent sandbox
+
+A host-level confinement around an agent process tree (typically filesystem
+path allowlists via Landlock helpers such as landrun, plus reduced `PATH` and
+env allowlists) so the default agent CLI entrypoint cannot read or write
+arbitrary locations under the [operator](#operator)'s
+[host home](#host-home).
+
+Distinct from application-level tool permissions inside the agent product.
+Operator design and implementation guidance lives under
+[operator/sandboxing.md](../operator/sandboxing.md) and
+[operator/implementing-sandbox.md](../operator/implementing-sandbox.md).
+
+## sandboxed entrypoint
+
+The default command name on `PATH` for an agent CLI (for example `goose`)
+that resolves to a wrapper applying an [agent sandbox](#agent-sandbox), not
+to the upstream binary. The real binary should live off `PATH` under extended
+XDG opt ([RFC 24](./summaries/salotz-rfc-024-extended-xdg-base-directory.md)).
+
+## unsandboxed entrypoint
+
+An explicitly named bypass command (for example `goose-unsandboxed`) that
+runs the real agent binary with full user privileges and should warn loudly
+on stderr. Used when a workflow cannot run inside the
+[agent sandbox](#agent-sandbox); prefer widening sandbox mounts when only path
+access is missing.

@@ -7,13 +7,16 @@ other task.
 This repo should be accessible for reference over the internet or
 placed into context accessible by agents for work on a project.
 
-Guidelines are split into two trees:
+Guidelines are split into these trees:
 
 - [shared/](./shared/): Portable guidelines that can be imported into
-  projects and shared with others.
+  projects and shared with others (primarily **agent-readable**).
 - [personal/](./personal/): Operator- and host-specific guidelines
   (shell config, host paths, personal skills). Stays in this repo; load
-  when that context applies.
+  when that context applies (still shaped for agents on those hosts).
+- [operator/](./operator/): **Human operator** guidance for designing and
+  running host controls around agents (sandboxing, PATH layout, loud
+  bypasses). Not default agent session context.
 
 See the [shared glossary](./shared/glossary.md) for definition of
 specific terms and concepts as they are used throughout these
@@ -37,6 +40,18 @@ documents.
   restatement.
 - [Research](./shared/research.md): Guidelines for research.
 
+## Operator guideline groups
+
+For humans who install and supervise agents on a host (not agent
+bootloaders):
+
+- [Operator hub](./operator/README.md): audience split and how to use this
+  tree.
+- [Sandboxing agents](./operator/sandboxing.md): why default-on sandboxing,
+  principles, threat model, escape hatches.
+- [Implementing a sandboxed agent CLI](./operator/implementing-sandbox.md):
+  reproduce the landrun + opt + PATH wrapper pattern on your own machine.
+
 ## Getting Started
 
 - Projects: [shared/getting-started.md](./shared/getting-started.md)
@@ -44,6 +59,8 @@ documents.
 - Hosts (personal): [personal/getting-started.md](./personal/getting-started.md)
   (drop-in `~/.agents/AGENTS.md`, plus harness pointers such as
   `~/.config/goose/AGENTS.md` for goose).
+- Host hardening (operators): [operator/README.md](./operator/README.md)
+  (sandboxing patterns distilled from bimker design decisions).
 
 ## Maintaining this repo
 

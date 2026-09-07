@@ -21,3 +21,14 @@ This directory is always located at `~/.bimker`. Agents should read the context 
 Changes to Bimker should be treated with special care and first proposed and made explicit exactly what changes are being made and why. Do not attempt to refactor or change the structure unless specifically asked and currently working on Bimker as the project under work.
 
 Of particular interest is the shell configuration which is at `~/.bimker/bimhaw`. Refer to the [bimhaw](https://github.com/salotz/bimhaw) documentation for instructions on modifying this for all shell configuration tasks.
+
+### Agent CLI sandboxing (goose)
+
+Bimker owns installers and PATH wrappers that run the goose CLI under landrun
+by default (real binary under `~/.local/opt`, wrappers on `~/.local/bin`).
+Durable decisions live under `~/.bimker/design/` (architecture + ADRs).
+
+Portable **operator** explanation and DIY steps (not agent session rules):
+
+- [Sandboxing agents](../operator/sandboxing.md)
+- [Implementing a sandboxed agent CLI](../operator/implementing-sandbox.md)

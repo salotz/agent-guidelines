@@ -31,3 +31,12 @@ Always follow [shared](../shared/) first. Files here only add host-specific
 paths and procedures. Where both apply, shared standards win on portable
 behavior; personal wins on concrete locations and install/config mechanics
 for this operator.
+
+## Relationship to operator docs
+
+Human-facing patterns for sandboxing agent CLIs (PATH wrappers, landrun,
+loud bypasses) live under [operator/](../operator/). Those docs generalize
+design decisions that may be recorded in a host bunker such as bimker
+(`design/architecture`, `design/decisions`). Personal files here remain
+agent-oriented host facts; read `operator/` when *you* are implementing or
+reviewing sandbox controls.
