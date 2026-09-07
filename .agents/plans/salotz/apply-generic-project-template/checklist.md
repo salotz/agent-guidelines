@@ -5,22 +5,22 @@ Do not put operator answers here (use [decisions.md](./decisions.md)).
 
 ## Phase 0 — Decisions
 
-- [ ] Q1 PRJX identity locked/accepted
-- [ ] Q2 `content/` layout locked/accepted
-- [ ] Q3 stubs locked/accepted
-- [ ] Q4 mise filename locked/accepted
-- [ ] Q5 hk strictness locked/accepted
-- [ ] Q6 commit slicing locked/accepted
-- [ ] Q7 `.bootstrap/` scope locked/accepted
-- [ ] Q8 `preload` scope locked/accepted
-- [ ] Q9 run preload in-session locked/accepted
+- [x] Q1 PRJX identity locked/accepted
+- [x] Q2 `content/` layout locked/accepted
+- [x] Q3 stubs locked/accepted
+- [x] Q4 mise filename locked/accepted
+- [x] Q5 hk strictness locked/accepted
+- [x] Q6 commit slicing locked/accepted
+- [x] Q7 `.bootstrap/` scope locked/accepted
+- [x] Q8 `preload` scope locked/accepted
+- [x] Q9 run preload in-session locked/accepted
 - [ ] ADRs drafted under `design/decisions/` (Phase 5 ok)
 
 ## Phase 1 — Hygiene
 
-- [ ] Root `.gitignore` (`.local/`, `.mise.local.toml`, `.agent-shell/`, `*~`, …)
-- [ ] Delete `.editorconfig~`
-- [ ] Confirm `.editorconfig` defaults
+- [x] Root `.gitignore` (`.local/`, `.mise.local.toml`, `.agent-shell/`, `*~`, …)
+- [x] Delete `.editorconfig~`
+- [x] Confirm `.editorconfig` defaults
 
 ## Phase 2 — `content/` migration
 

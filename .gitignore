@@ -1,0 +1,21 @@
+# PRJX host-local tree (see salotz RFC 28)
+.local/
+
+# mise machine-local overrides / secrets
+.mise.local.toml
+mise.local.toml
+
+# Agent harness scratch in this checkout
+.agent-shell/
+
+# Editor / backup junk
+*~
+.*.swp
+.*.swo
+.DS_Store
+Thumbs.db
+
+# Python bytecode if .tasks/ helpers appear
+__pycache__/
+*.py[cod]
+.pytest_cache/

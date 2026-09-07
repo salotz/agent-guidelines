@@ -5,11 +5,9 @@ Dogfood [templates/generic-project.md](../../../../templates/generic-project.md)
 ## Status
 
 - Planning:
-  active; open queue **Q1–Q9** in [decisions.md](./decisions.md) (all `proposed`).
-- Guideline edit this pass:
-  bootstrap/preload section cleaned up; glossary + template + hubs updated.
+  **Q1–Q9 locked** (operator accepted 2026-09-07).
 - Execution:
-  not started (await decisions updated / “go”).
+  **Phase 1 hygiene done**; next = Phase 2 `content/` migration.
 
 ## Goals
 
