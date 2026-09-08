@@ -2,6 +2,16 @@
 
 Active and recent plan folders under `.agents/plans/salotz/`.
 
-| Plan | Status | Notes |
-|------|--------|-------|
-| [apply-generic-project-template](./apply-generic-project-template/) | active | Dogfood generic project template + migrate guideline trees under `content/` |
+## In Progress
+
+_(none)_
+
+## Backlog
+
+_(none)_
+
+## Done
+
+| Plan | Notes |
+|------|--------|
+| [apply-generic-project-template](./apply-generic-project-template/) | Done 2026-09-08 — dogfood generic template + `content/` migration; operator mise residual complete |

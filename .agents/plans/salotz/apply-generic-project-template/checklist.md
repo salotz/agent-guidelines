@@ -14,22 +14,22 @@ Do not put operator answers here (use [decisions.md](./decisions.md)).
 - [x] Q7 `.bootstrap/` scope locked/accepted
 - [x] Q8 `preload` scope locked/accepted
 - [x] Q9 run preload in-session locked/accepted
-- [ ] ADRs drafted under `design/decisions/` (Phase 5 ok)
+- [x] ADRs drafted under `design/decisions/` (001–005)
 
 ## Phase 1 — Hygiene
 
-- [x] Root `.gitignore` (`.local/`, `.mise.local.toml`, `.agent-shell/`, `*~`, …)
-- [x] Delete `.editorconfig~`
+- [x] Root `.gitignore`
+- [x] Delete editor backup junk
 - [x] Confirm `.editorconfig` defaults
 
 ## Phase 2 — `content/` migration
 
 - [x] Create `content/`
 - [x] `git mv` four trees → `content/`
-- [x] Rewrite links (root, contributing, intra-tree verify, plan tree)
+- [x] Rewrite links
 - [x] Hubs: `README.md`, `AGENTS.md`
 - [x] Stubs per Q3 (none)
-- [x] Link existence check green (tracked docs; ignore `.agent-shell/`)
+- [x] Link existence check green
 
 ## Phase 3 — PRJX
 
@@ -40,36 +40,40 @@ Do not put operator answers here (use [decisions.md](./decisions.md)).
 ## Phase 4 — Bootstrap + mise + hk + preload
 
 - [x] `.bootstrap/host-tools.conf` (Q7)
-- [x] `.bootstrap/host-tool-check` (Q7; run via `sh .bootstrap/host-tool-check`)
-- [x] `mise.toml` (Q4): tools + `host-tool-check` / `preload` / `check` tasks
-- [x] `hk.pkl` (Q5: trailing-whitespace + newlines builtins)
-- [x] `.tasks/preload.py` skipped (Q8 hooks-only one-liner)
-- [x] `sh .bootstrap/host-tool-check` passes in agent session
-- [ ] `mise install` — **blocked in agent sandbox** (host mise state/trust + no new binary exec); operator should run
-- [ ] `mise run preload` — operator (Q9)
-- [ ] `mise run check` — operator (Q9)
+- [x] `.bootstrap/host-tool-check` (Q7)
+- [x] `mise.toml` (Q4): host-tool-check / preload / check / format / validate
+- [x] `hk.pkl` (Q5)
+- [x] `.tasks/preload.py` skipped (Q8 one-liner)
+- [x] `sh .bootstrap/host-tool-check` passes
+- [x] `mise install` — operator on host (2026-09-08)
+- [x] `mise run preload` — operator; verified via `.git/config` `hook.hk-pre-commit` → `mise x -- hk run pre-commit --from-hook`
+- [x] `mise run format` / `check` — operator on host (2026-09-08); agent sandbox cannot re-exec mise
 
 ## Phase 5 — RFC 22 + docs
 
-- [ ] `contributing/README.md`
-- [ ] `contributing/development.md` (bootstrap → install → preload → check)
-- [ ] Path fixes in editing/collation
-- [ ] `.agents/README.md` (+ optional repo-map)
-- [ ] `design/{README,goals,decisions}`
-- [ ] Refresh root `AGENTS.md` / `README.md`
+- [x] `contributing/README.md`
+- [x] `contributing/development.md`
+- [x] Path fixes in editing/collation
+- [x] `.agents/README.md` + `context/repo-map.md`
+- [x] `design/{README,goals,decisions}` (ADRs 001–005)
+- [x] Refresh root `AGENTS.md` / `README.md`
 
 ## Phase 6 — Blobs
 
-- [x] ADR: no DVC yet ([design/decisions/004-no-blob-tooling-yet.md](../../../../design/decisions/004-no-blob-tooling-yet.md))
+- [x] ADR 004: no DVC yet
 - [x] Mention in goals / development
 
 ## Phase 7 — Validate
 
-- [ ] Full host-tool-check + mise check path
-- [ ] Optional link-check task
-- [ ] Ignores verified
-- [ ] Plan index / checklist marked done
+- [x] `sh .bootstrap/host-tool-check` green
+- [x] Full relative-link crawl: 0 broken outside fences (re-checked 2026-09-08)
+- [x] Header audit clean on prior crawl
+- [x] Ignores verified
+- [x] Operator mise install / preload / format / check
+- [x] Optional link-check task deferred
+- [x] Plan index / checklist marked **done**
 
 ## Phase 8 — Commits (operator)
 
-- [ ] Slices per Q6
+- [x] Product slices on `main` (hygiene → content → PRJX → tooling → RFC22)
+- [ ] Optional: commit remaining plan-meta (`checklist` / plan `README` / `todo.md`) if desired

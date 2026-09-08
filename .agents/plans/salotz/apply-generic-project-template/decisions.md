@@ -221,3 +221,4 @@ Operator accepted proposal 2026-09-07.
 - 2026-09-07: Initial Q1–Q7 as `proposed` (later renumbered).
 - 2026-09-07: Rebuilt for bootstrap/preload; Q1–Q9 `proposed`.
 - 2026-09-07: Operator accepted all proposals; Q1–Q9 → `locked`. Phase 1 execution started.
+- 2026-09-08: Operator completed host `mise install` / preload / format / check; plan marked **done**.

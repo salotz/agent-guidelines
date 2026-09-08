@@ -1,21 +1,24 @@
 # Apply generic project template (this repo)
 
-Dogfood [templates/generic-project.md](../../../../content/templates/generic-project.md) on **agent-guidelines**, migrate guideline trees under **`content/`**, and add **bootstrap → install → preload** per [project-management-and-tooling](../../../../content/shared/project-management-and-tooling.md#bootstrapping-a-project).
+Dogfood [content/templates/generic-project.md](../../../../content/templates/generic-project.md) on **agent-guidelines**, migrate guideline trees under **`content/`**, and add **bootstrap → install → preload** per [project-management-and-tooling](../../../../content/shared/project-management-and-tooling.md#bootstrapping-a-project).
 
 ## Status
 
-- Planning:
-  **Q1–Q9 locked** (operator accepted 2026-09-07).
-- Execution:
-  **Phase 1–6 done** (hygiene, `content/`, PRJX, tooling files, RFC 22 docs, blob ADR).
-  **Operator still needs** `mise trust` → `mise install` → `mise run preload` → `mise run format`/`check` (sandbox blocked installs).
-  Next = Phase 7 validate (operator-side tooling + optional link crawl).
+**Done** (2026-09-08).
 
-## Goals
+- Q1–Q9 locked; phases 1–8 complete.
+- Operator ran mise on the host (`install` / `preload` / `format` / `check`).
+- Preload confirmed in-repo: `.git/config` registers `hook.hk-pre-commit` → `mise x -- hk run pre-commit --from-hook`.
+- Final agent re-check: host-tool-check green; 0 broken relative links outside fences; layout/tooling/PRJX/RFC22 files present.
+- Agent sandbox still cannot invoke host mise (expected); not a project defect.
 
-1. Satisfy generic-project template + bootstrap/preload guide (or ADR for blobs).
-2. Move `operator/`, `personal/`, `shared/`, `templates/` → `content/<name>/`.
-3. Add PRJX, `.bootstrap/`, mise, hk, `preload`, RFC 22 surfaces.
+Optional leftover: commit these plan-meta files if not already staged.
+
+## Goals (achieved)
+
+1. Generic-project template + bootstrap/preload guide dogfooded (blobs = ADR 004 defer).
+2. Guideline trees only under `content/`.
+3. PRJX, `.bootstrap/`, mise, hk, `preload`/`format`/`check`, RFC 22 surfaces.
 
 ## Documents
 
@@ -24,23 +27,17 @@ Dogfood [templates/generic-project.md](../../../../content/templates/generic-pro
 | [README.md](./README.md) | This index |
 | [plan.md](./plan.md) | Full plan |
 | [checklist.md](./checklist.md) | Execution checklist |
-| [decisions.md](./decisions.md) | **Only** operator Q&A (`Q*`) |
-| [background/](./background/) | Long notes (no answers) |
+| [decisions.md](./decisions.md) | Operator Q&A (`Q*`) |
+| [background/](./background/) | Long notes |
 
-## Phase order (summary)
+## Happy path (this repo, going forward)
 
-0. Lock **Q1–Q9**
-1. Hygiene
-2. **`content/` migration**
-3. PRJX
-4. **`.bootstrap/` + mise + hk + preload**
-5. RFC 22 docs / contributing development flow
-6. Blob ADR
-7. Validate + commit slices
+```sh
+sh .bootstrap/host-tool-check
+mise install
+mise run preload
+mise run format   # optional
+mise run check
+```
 
-Decision ids use **`Q*`** per [work-process](../../../../content/personal/work-process.md).
-
-## After each execution step
-
-Draft commit message, operator test commands, truncated agent test output.
-No commits unless asked.
+See [contributing/development.md](../../../../contributing/development.md).
