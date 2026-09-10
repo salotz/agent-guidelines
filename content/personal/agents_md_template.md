@@ -14,7 +14,7 @@ See personal getting-started.
 1. **Shared (portable baseline)** —
    always apply when available:
    - `shared/generic-agent-guidelines.md`
-   - task-specific shared docs as needed (`software-guidelines.md`, `research.md`, `technical-writing.md`, `writing-contributing.md`)
+   - task-specific shared docs as needed (`software-guidelines.md`, `research.md`, `writing-for-humans.md`, `technical-writing.md`, `writing-contributing.md`)
    - `shared/glossary.md` for terms
    - `shared/summaries/` before fetching full external standards
 2. **Personal (this host)** —

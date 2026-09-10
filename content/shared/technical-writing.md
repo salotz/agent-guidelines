@@ -6,6 +6,8 @@ This is distinguished from "research" in that research is meant for an operator'
 
 Audiences can be intra-company audiences or the public.
 
+For agent-to-operator chat, plans for review, and other plain-text-first output, see [Writing for humans](./writing-for-humans.md).
+
 For documentation aimed at project contributors (for example under `contributing/`), see [Writing Contributor Documentation](./writing-contributing.md).
 
 ## Formats

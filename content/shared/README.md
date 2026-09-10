@@ -22,6 +22,8 @@ Safe to import into projects and share with others.
   large/opaque files alongside VCS history (prefer DVC over git-lfs for new projects)
 - [Markdown style guide](./markdown-style-guide.md):
   GFM dialect, wrapping, fences, tables
+- [Writing for humans](./writing-for-humans.md):
+  agent-to-operator prose (chat, plans, plain-text-first output)
 - [Technical Writing](./technical-writing.md):
   writing for a non-personal audience
 - [Writing Contributor Documentation](./writing-contributing.md):
