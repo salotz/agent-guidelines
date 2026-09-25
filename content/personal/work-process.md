@@ -21,7 +21,24 @@ Standard instructions for execution are "go" or "execute next step".
 By default agents only execute one step at a time before returning to the operator for feedback.
 
 Unless instructed to, agents should not commit changes.
-Using a git client with current changes is the operator's main interface for reviewing changes (i.e. `magit` in Emacs).
+
+**Do not stage changes in Git** (`git add`, `git rm --cached` as a way to
+build a commit, DVC `core.autostage`, task helpers that `git add`, Magit
+stage, etc.) unless the operator explicitly asks to stage or commit.
+Leave edits as **unstaged** working-tree changes.
+
+The operator uses a git client (e.g. `magit` in Emacs) as the main review
+UI. **Staged** vs **unstaged** is a deliberate split:
+
+- Unstaged: what the agent (or other automated work) just changed
+- Staged: what the operator has already accepted or is preparing to commit
+
+Agents that stage on their own collapse that signal and hide agent churn
+inside the operator’s staging area.
+
+Exceptions only when the tool *must* touch the index for a correct
+result the operator asked for (rare). Prefer explaining the need over
+quietly staging. Never stage “to be helpful” at the end of a task.
 
 After executing, the agent should provide in the chat buffer interface and in a planning result document:
 

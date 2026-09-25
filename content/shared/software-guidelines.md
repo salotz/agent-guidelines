@@ -6,6 +6,21 @@ These are guidelines specific to the authorship and maintenance of software proj
 
 Requirements for generic coding tasks.
 
+### Git working tree vs index
+
+Unless the operator explicitly asks to stage or commit:
+
+- Edit files in the **working tree** only.
+- Do **not** `git add` / stage / `git commit`.
+- Do **not** enable or rely on tool options that auto-stage (e.g. DVC
+  `core.autostage`, helpers that stage `*.dvc` after `dvc add`).
+
+Operators often keep **their** intent on the staged side and review
+**agent** work as unstaged diffs (see personal [Work Process](../personal/work-process.md)).
+
+Draft a commit message in chat when a step is done; leave staging and
+the commit to the operator.
+
 ### Codetags
 
 Follow [salotz RFC 6](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags) ([summary](./summaries/salotz-rfc-006-codetags.md);
