@@ -24,6 +24,20 @@ though other formats may appear as well.
 See the format-specific style guides —
 for Markdown, [Markdown style guide](./markdown-style-guide.md).
 
+## Structure and section breaks
+
+Do not insert superfluous thematic breaks (`---` / `***` / `___` in
+Markdown) between sections in technical writing.
+
+Headings already separate topics. Extra horizontal rules add visual noise,
+travel poorly across renderers, and encourage decorative structure instead
+of clear outline hierarchy.
+
+Use a thematic break only when you need a true break in thought that is
+*not* a new heading—rare in specs, guidelines, and project docs. Prefer
+another heading, a short transitional sentence, or simply the next
+section.
+
 ## When to use tables
 
 Do not use tables for verbose prose even if a tabular format makes sense abstractly.
@@ -36,10 +50,10 @@ Instead, favor sub-sections with headers for complex multi-column information.
 For example, instead of:
 
 ```markdown
-| Rule | Detail |
-| --- | --- |
+| Rule                           | Detail                                                                         |
+|--------------------------------|--------------------------------------------------------------------------------|
 | Do this when that says to do it | We want to do this because it is the right thing to do and my human said so. |
-| Another rule to follow | This is an additional rule we have to follow |
+| Another rule to follow         | This is an additional rule we have to follow                                   |
 ```
 
 Write this:
