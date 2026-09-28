@@ -8,7 +8,9 @@ _(none)_
 
 ## Backlog
 
-_(none)_
+| Plan | Notes |
+|------|--------|
+| [software-type-guidelines-cli](./software-type-guidelines-cli/) | Add `software-types/` shared guidelines + CLI design from [clig.dev](https://clig.dev/); summary + hubs. Plan only (2026-09-27). |
 
 ## Done
 
