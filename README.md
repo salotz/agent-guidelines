@@ -33,7 +33,8 @@ See the [shared glossary](./content/shared/glossary.md) for definition of specif
 - [Markdown style guide](./content/shared/markdown-style-guide.md):
   GFM dialect, wrapping, fences, tables, and related formatting rules.
 - [Writing for humans](./content/shared/writing-for-humans.md):
-  How agents should write to operators (chat, plans for review, plain-text-first output).
+  How agents should write to operators (chat, plans for review, plain-text-first output,
+  abbreviations and initialisms).
 - [Technical Writing](./content/shared/technical-writing.md):
   Guidelines for technical writing meant for a non-personal audience.
 - [Writing Contributor Documentation](./content/shared/writing-contributing.md):
