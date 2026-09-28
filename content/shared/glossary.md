@@ -147,6 +147,17 @@ Abbreviation for "binary large object".
 Colloquially, any file that is too large or opaque to handle well with a code VCS tool like git.
 See [Blob Management](./blob-management.md).
 
+## single source of truth (SSOT)
+
+One place that owns the **canonical** definition of a fact, list, or policy so other copies do not drift.
+
+Example:
+yerk documents environment variables from `internal/envvars` rather than maintaining separate ad-hoc lists in every command help string.
+
+Alias:
+**SSOT** (expand on first use with operators unless already in agreed shared context;
+see [Writing for humans — Abbreviations and initialisms](./writing-for-humans.md#abbreviations-and-initialisms)).
+
 ## Too much information (TMI)
 
 An observation that something is too verbose and providing information or context that is irrelevant in the current context.
