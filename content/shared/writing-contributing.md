@@ -4,6 +4,8 @@ Guidelines for documentation aimed at project contributors (for example material
 
 For writing aimed at a non-personal audience more generally, see [Technical Writing](./technical-writing.md).
 
+For structuring software product docs (tutorials, how-tos, reference, explanation), see [Software Documentation](./software/documentation.md).
+
 For agent-to-operator chat and plan prose, see [Writing for humans](./writing-for-humans.md).
 
 ## Style guide

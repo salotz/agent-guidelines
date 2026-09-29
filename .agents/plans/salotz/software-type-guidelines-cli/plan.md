@@ -9,10 +9,15 @@ Operator found [Command Line Interface Guidelines](https://clig.dev/)
 [`/llms.txt`](https://clig.dev/llms.txt)) and wants that advice folded into
 **agent-facing** shared guidelines.
 
-Today `content/shared/software-guidelines.md` is **process/authorship** focused
-(git hygiene, codetags, comments, commits, TDD, coverage).
-There is **no** place for guidelines keyed by **kind of software** being designed
+Today software process/authorship lives under `content/shared/software/`
+(`guidelines.md`; plus `documentation.md` for Diátaxis).
+There is **no** place yet for guidelines keyed by **kind of software** being designed
 (CLIs, libraries, services, etc.).
+
+**Layout note (2026-09-28):** `software-guidelines.md` was moved to
+`content/shared/software/guidelines.md`. Prefer nesting new software-type material
+under `content/shared/software/` (for example `software/types/`) unless a later
+decision keeps a top-level sibling.
 
 This plan adds that structure and seeds it with CLI design guidance distilled
 from clig.dev (plus related further reading where useful).

@@ -95,7 +95,7 @@ Tests that run in an integration environment.
 A specially formatted comment tag (e.g. TODO,
 FIXME) placed in source code to add machine-searchable semantic meaning beyond freeform comments.
 Defined by [salotz RFC 6](./summaries/salotz-rfc-006-codetags.md).
-Operator usage rules live under [Software Guidelines — Codetags](./software-guidelines.md#codetags) and [Source Comments](./software-guidelines.md#source-comments).
+Operator usage rules live under [Software Guidelines — Codetags](./software/guidelines.md#codetags) and [Source Comments](./software/guidelines.md#source-comments).
 
 ## PRJX
 

@@ -26,8 +26,10 @@ See the [shared glossary](./content/shared/glossary.md) for definition of specif
   Generic advice for any agent-assisted work.
 - [Project Management and Tooling](./content/shared/project-management-and-tooling.md):
   Config-file style, layered tooling, bootstrap/preload, and how automation invokes tools.
-- [Software](./content/shared/software-guidelines.md):
-  Guidelines specific to the authorship and maintenance of software projects.
+- [Software](./content/shared/software/):
+  Authorship, maintenance, and documentation of software projects
+  ([guidelines](./content/shared/software/guidelines.md),
+  [documentation](./content/shared/software/documentation.md) / Diátaxis).
 - [Blob Management](./content/shared/blob-management.md):
   Large or opaque files managed alongside repository history (prefer DVC over git-lfs for new projects).
 - [Markdown style guide](./content/shared/markdown-style-guide.md):

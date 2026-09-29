@@ -2,6 +2,10 @@
 
 These are guidelines specific to the authorship and maintenance of software projects.
 
+Process and authorship only (git, comments, commits, branching, tests).
+For documentation structure, see [Documentation](./documentation.md) (Diátaxis).
+Hub for this folder: [Software](./README.md).
+
 ## Generic
 
 Requirements for generic coding tasks.
@@ -16,16 +20,16 @@ Unless the operator explicitly asks to stage or commit:
   `core.autostage`, helpers that stage `*.dvc` after `dvc add`).
 
 Operators often keep **their** intent on the staged side and review
-**agent** work as unstaged diffs (see personal [Work Process](../personal/work-process.md)).
+**agent** work as unstaged diffs (see personal [Work Process](../../personal/work-process.md)).
 
 Draft a commit message in chat when a step is done; leave staging and
 the commit to the operator.
 
 ### Codetags
 
-Follow [salotz RFC 6](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags) ([summary](./summaries/salotz-rfc-006-codetags.md);
+Follow [salotz RFC 6](https://github.com/salotz/rfcs/tree/master/rfcs/salotz.006_codetags) ([summary](../summaries/salotz-rfc-006-codetags.md);
 glossary:
-[codetag](./glossary.md#codetag)) when writing comments in source code.
+[codetag](../glossary.md#codetag)) when writing comments in source code.
 
 Only use **normative** codetag names from that RFC (e.g. `TODO`, `FIXME`, `NOTE`, `TOREV`).
 Do not invent ad-hoc “tags” that look like codetags (`Guard:`, `Context:`, `Plan:`, etc.).
@@ -36,7 +40,7 @@ prefer them over fake tags.
 ### Source Comments
 
 Comment style for code that agents write or edit.
-Language-specific style guides (e.g. [Google Style Guides](https://google.github.io/styleguide/) ([summary](./summaries/google-style-guides.md))) still apply for formatting;
+Language-specific style guides (e.g. [Google Style Guides](https://google.github.io/styleguide/) ([summary](../summaries/google-style-guides.md))) still apply for formatting;
 this section is operator preference on **what** comments should say and **where** they sit.
 
 #### File preamble
@@ -122,7 +126,7 @@ def poll():
 
 ### Git Commit Messages
 
-Use the advice in this [blog post](https://chris.beams.io/git-commit) ([summary](./summaries/git-commit-messages-chris-beams.md)).
+Use the advice in this [blog post](https://chris.beams.io/git-commit) ([summary](../summaries/git-commit-messages-chris-beams.md)).
 
 Additionally, favor bulleted lists rather than prose lists when listing changes.
 
@@ -140,15 +144,15 @@ Instead:
 - Fix system C
 ```
 
-Otherwise follow the guidelines for [technical writing](./technical-writing.md).
+Otherwise follow the guidelines for [technical writing](../technical-writing.md).
 
 ### Blob Management
 
-For large or opaque files that should not live in ordinary git history, see [Blob Management](./blob-management.md).
+For large or opaque files that should not live in ordinary git history, see [Blob Management](../blob-management.md).
 
 ### Git Branching Strategies
 
-Unless otherwise specified in a project you should always assume that the repository follows the [trunk based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) ([summary](./summaries/trunk-based-development-atlassian.md)) pattern with short lived feature branches.
+Unless otherwise specified in a project you should always assume that the repository follows the [trunk based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) ([summary](../summaries/trunk-based-development-atlassian.md)) pattern with short lived feature branches.
 
 There should be no merges and instead use rebasing heavily.
 

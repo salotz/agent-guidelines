@@ -36,7 +36,11 @@ For large or opaque repository files that need tooling beyond normal VCS operati
 
 ## Software
 
-For authorship and maintenance of software projects (comments, commits, branching, tests), see [Software Guidelines](./software-guidelines.md).
+For authorship and maintenance of software projects (comments, commits, branching, tests), see [Software Guidelines](./software/guidelines.md).
+
+For structuring software documentation (Diátaxis: tutorials, how-to guides, reference, explanation), see [Software Documentation](./software/documentation.md).
+
+Software topic hub: [Software](./software/).
 
 ## Writing
 

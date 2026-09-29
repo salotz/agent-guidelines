@@ -12,6 +12,6 @@ As such research is allowed to be more verbose and complete in details (but this
 
 Research is not only writing or cataloguing of facts but includes inference and experimentation.
 As such it may include writing code for execution.
-Coding guidelines for research are significantly different from the [software guidelines](./software-guidelines.md).
+Coding guidelines for research are significantly different from the [software guidelines](./software/guidelines.md).
 
 Research can have a distinct end point if specific questions are answered, but it may also be open ended.

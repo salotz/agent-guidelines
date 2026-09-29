@@ -16,8 +16,10 @@ Safe to import into projects and share with others.
   generic advice for any agent-assisted work
 - [Project Management and Tooling](./project-management-and-tooling.md):
   config-file style, layered tooling, bootstrap/preload, automation vs shell
-- [Software](./software-guidelines.md):
-  authorship and maintenance of software projects
+- [Software](./software/):
+  authorship, maintenance, and documentation of software projects
+  ([guidelines](./software/guidelines.md),
+  [documentation](./software/documentation.md) / Diátaxis)
 - [Blob Management](./blob-management.md):
   large/opaque files alongside VCS history (prefer DVC over git-lfs for new projects)
 - [Markdown style guide](./markdown-style-guide.md):

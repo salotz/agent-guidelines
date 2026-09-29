@@ -31,5 +31,5 @@ Google (and other) language guides cover formatting, naming, and often comment *
 For **what** comments should contain, **where** they attach,
 file preambles vs local notes,
 and **codetag** discipline,
-also follow [software-guidelines.md](../software-guidelines.md) (Source Comments and Codetags).
+also follow [software/guidelines.md](../software/guidelines.md) (Source Comments and Codetags).
 Those operator rules win when a generic style guide is silent or encourages noisier commentary.

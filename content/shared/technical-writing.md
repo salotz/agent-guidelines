@@ -10,6 +10,8 @@ For agent-to-operator chat, plans for review, and other plain-text-first output,
 
 For documentation aimed at project contributors (for example under `contributing/`), see [Writing Contributor Documentation](./writing-contributing.md).
 
+For structuring software project documentation with Diátaxis (tutorials, how-to guides, reference, explanation), see [Software Documentation](./software/documentation.md).
+
 ## Formats
 
 The default format for technical writing is Markdown.
@@ -96,13 +98,15 @@ or only suggest them.
 
 ## Code Snippets
 
-Follow the same guidelines for writing [software](./software-guidelines.md).
+Follow the same guidelines for writing [software](./software/guidelines.md).
 However, by the nature of code snippets they will differ in some ways (for example modularity).
 Those differences will be documented specifically in time.
 
+For **what kinds** of software docs to write and how to separate them, see [Software Documentation](./software/documentation.md) (Diátaxis).
+
 ### Comments
 
-For comments in snippets, follow the [source comment](./software-guidelines.md#source-comments) style used in real code—comments on their own lines:
+For comments in snippets, follow the [source comment](./software/guidelines.md#source-comments) style used in real code—comments on their own lines:
 
 ```python
 # Data for the process
