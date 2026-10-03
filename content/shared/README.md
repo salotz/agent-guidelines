@@ -30,6 +30,7 @@ Safe to import into projects and share with others.
   agent-to-operator prose (chat, plans, plain-text-first output)
 - [Technical Writing](./technical-writing.md):
   writing for a non-personal audience
+  (including [placeholders](./technical-writing.md#placeholders))
 - [Writing Contributor Documentation](./writing-contributing.md):
   contributor-facing docs (style guide exceptions, don't restate upstream)
 - [Research](./research.md):

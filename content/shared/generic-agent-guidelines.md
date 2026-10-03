@@ -51,7 +51,8 @@ and **abbreviations / initialisms** (define before use; prefer full wording;
 ask before promoting short forms into a glossary),
 see [Writing for humans](./writing-for-humans.md).
 
-For technical writing aimed at a non-personal audience, see [Technical Writing](./technical-writing.md).
+For technical writing aimed at a non-personal audience, see [Technical Writing](./technical-writing.md)
+(including [placeholders](./technical-writing.md#placeholders) for replaceable names, paths, and CLI tokens).
 
 For contributor-facing documentation (style-guide baseline and exceptions,
 avoiding upstream restatement), see [Writing Contributor Documentation](./writing-contributing.md).

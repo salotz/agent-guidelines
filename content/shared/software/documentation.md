@@ -95,6 +95,7 @@ See [Writing Contributor Documentation](../writing-contributing.md#dont-recapitu
 ### Style and format
 
 - Prose and structure: [Technical Writing](../technical-writing.md)
+  (including [placeholders](../technical-writing.md#placeholders))
 - Markdown mechanics: [Markdown style guide](../markdown-style-guide.md)
 - Code in docs: comment and snippet habits aligned with [Software Guidelines — Source Comments](./guidelines.md#source-comments) and the code-snippet notes in technical writing
 

@@ -61,6 +61,19 @@ See [Writing Contributor Documentation](../writing-contributing.md):
 - Word list used as baseline, not a closed vocabulary
 - Stricter public-doc limits on extra context / disclosure (related pages include [excessive claims](https://developers.google.com/style/excessive-claims))
 
+## Placeholders and command-line syntax
+
+Google's pages on
+[placeholders](https://developers.google.com/style/placeholders) and
+[command-line syntax](https://developers.google.com/style/code-syntax)
+are important inputs.
+This repository does **not** adopt Google's HTML-centric defaults wholesale for plain-text source.
+
+House rules (angle-bracket primary profile, fallbacks, SYNOPSIS vs runnable samples):
+[Technical writing: Placeholders](../technical-writing.md#placeholders).
+Background and further sources:
+[Technical doc placeholders (summary)](./technical-doc-placeholders.md).
+
 ## Agent notes
 
 - Prefer the project summary plus listed exceptions over loading the full guide into context.
