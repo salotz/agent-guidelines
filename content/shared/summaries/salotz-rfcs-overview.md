@@ -9,13 +9,16 @@ agent context,
 naming, git practices, and related topics.
 
 These RFCs are referenced throughout the agent-guidelines as the source of personal standards for:
+- Growth Versioning / semantic changelog (RFC 002)
 - Project/AI coding structure (RFC 22)
 - Local agent context (RFC 23)
 - Extended XDG directories (RFC 24)
 - Host domain organization (RFC 25)
 - Domain local configuration (RFC 26)
+- Env name expressions (RFC 027)
 - PRJX project layout and metadata (RFC 28)
 - Glossary Markdown format (RFC 29)
+- Application info, env registry, env value types (RFC 030–032)
 - And others (e.g. codetags, git commit messages, naming)
 
 ## Usage

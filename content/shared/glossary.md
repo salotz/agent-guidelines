@@ -158,6 +158,29 @@ Alias:
 **SSOT** (expand on first use with operators unless already in agreed shared context;
 see [Writing for humans — Abbreviations and initialisms](./writing-for-humans.md#abbreviations-and-initialisms)).
 
+## API resource (CLI)
+
+In-process product object with `apiVersion`, `kind`, and stable fields shared between collectors and printers (kubectl-style, with or without HTTP).
+See [CLI and application patterns](./software/cli-applications.md#model-driven-api-resources).
+
+## application info (appinfo)
+
+Static usage-context metadata for a software product (products, commands, optional env registry), typically at `.appinfo/meta.toml`.
+See [RFC 030](./summaries/salotz-rfc-030-application-info.md) and [CLI and application patterns](./software/cli-applications.md).
+Distinct from [PRJX](#prjx) project metadata and from [packslip](#packslip) release signing.
+
+## Growth Versioning
+
+Product version scheme `B.R.G` (Breakage.Regression.Growth) from [salotz RFC 002](./summaries/salotz-rfc-002-growth-versioning.md).
+SemVer-*shaped* numbers with different part meanings than classic MAJOR.MINOR.PATCH.
+Used for CLI/binary product identity; do not confuse with API resource `apiVersion` or appinfo document version.
+
+## packslip
+
+Signed release/install metadata for distributable artifacts (digests, bin path, signer identity), consumed by installers such as mise.
+See [summary](./summaries/packslip.md).
+Complementary to [application info](#application-info-appinfo); not a replacement.
+
 ## Too much information (TMI)
 
 An observation that something is too verbose and providing information or context that is irrelevant in the current context.

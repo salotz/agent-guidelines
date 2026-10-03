@@ -4,7 +4,9 @@ These are guidelines specific to the authorship and maintenance of software proj
 
 Process and authorship only (git, comments, commits, branching, tests).
 For documentation structure, see [Documentation](./documentation.md) (Diátaxis).
-Hub for this folder: [Software](./README.md).
+For CLI interaction design, see [CLI UX](./cli-ux.md).
+For CLI product architecture, see [CLI and application patterns](./cli-applications.md).
+Hub: [Software](./README.md).
 
 ## Generic
 

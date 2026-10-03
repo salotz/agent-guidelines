@@ -81,3 +81,10 @@ Projects should follow the guidelines in the [shared guidelines](../shared/) sec
 
 Projects should pull in the relevant context for both humans (`contributing/`) and agents (for example `.agents/`) so that the project is self-documenting.
 See the [getting started](../shared/getting-started.md) section.
+
+## CLI / standalone tools
+
+When the project **is** a shippable CLI or host tool (not only “a repo that uses CLIs”), also load:
+
+- [CLI UX](../shared/software/cli-ux.md) — help, output, errors, flags
+- [CLI and application patterns](../shared/software/cli-applications.md) — layers, config/catalog, env + `.appinfo`, identity, resources, versioning, release

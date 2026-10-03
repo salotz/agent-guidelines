@@ -186,11 +186,13 @@ Follow existing summary pattern (e.g. `llms-txt-standard.md`,
 
 ## Success criteria
 
-- [ ] Agents designing a CLI have an obvious shared doc to load.
-- [ ] clig.dev is represented as a summary + cited source, not an uncredited paste.
-- [ ] Authorship guidelines and type-design guidelines are clearly separated.
-- [ ] Hubs link the new pages; internal links resolve.
-- [ ] Future types (library, service, …) have a defined place to land.
+- [x] Agents designing a CLI have an obvious shared doc to load (`software/cli-ux.md` + `software/cli-applications.md`).
+- [x] clig.dev is represented as a summary + cited source, not an uncredited paste.
+- [x] Authorship guidelines and type-design guidelines are clearly separated.
+- [x] Hubs link the new pages; internal links resolve.
+- [x] Future types (library, service, …) have a defined place to land (`content/shared/software/` siblings).
+
+**Done notes (2026-10-02):** Under `software/` rather than `software-types/` (see [decisions.md](./decisions.md)). Includes yerk-derived application architecture and RFC/packslip summaries beyond the original clig-only scope.
 
 ---
 

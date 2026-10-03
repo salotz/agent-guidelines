@@ -108,6 +108,8 @@ When asked to “add docs,” “write a README,” or “document this API”:
 4. Do not invent tutorials that only restate reference tables.
 5. Link existing types instead of copying.
 
+For CLI product layout (`docs/` vs `design/` vs `contributing/`, help vs repo reference, examples vs host state), also follow [CLI and application patterns](./cli-applications.md).
+
 ## Related writing guides
 
 - Software docs structure (this file):

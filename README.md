@@ -29,7 +29,9 @@ See the [shared glossary](./content/shared/glossary.md) for definition of specif
 - [Software](./content/shared/software/):
   Authorship, maintenance, and documentation of software projects
   ([guidelines](./content/shared/software/guidelines.md),
-  [documentation](./content/shared/software/documentation.md) / Diátaxis).
+  [documentation](./content/shared/software/documentation.md),
+  [CLI UX](./content/shared/software/cli-ux.md),
+  [CLI applications](./content/shared/software/cli-applications.md)).
 - [Blob Management](./content/shared/blob-management.md):
   Large or opaque files managed alongside repository history (prefer DVC over git-lfs for new projects).
 - [Markdown style guide](./content/shared/markdown-style-guide.md):

@@ -19,7 +19,9 @@ Safe to import into projects and share with others.
 - [Software](./software/):
   authorship, maintenance, and documentation of software projects
   ([guidelines](./software/guidelines.md),
-  [documentation](./software/documentation.md) / Diátaxis)
+  [documentation](./software/documentation.md),
+  [CLI UX](./software/cli-ux.md),
+  [CLI applications](./software/cli-applications.md))
 - [Blob Management](./blob-management.md):
   large/opaque files alongside VCS history (prefer DVC over git-lfs for new projects)
 - [Markdown style guide](./markdown-style-guide.md):
