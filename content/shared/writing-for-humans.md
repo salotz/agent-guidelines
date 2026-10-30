@@ -26,6 +26,25 @@ For Markdown dialect and formatting mechanics, see the [Markdown style guide](./
 
 Table guidance that applies especially to human-to-agent and plan prose lives in [Technical writing: When to use tables](./technical-writing.md#when-to-use-tables).
 
+## Links
+
+Match the output medium.
+
+Chat replies, plans reviewed in a chat buffer, and other session messages use Markdown link syntax:
+
+`[label](target)`
+
+Use that form for paths, URLs, and other targets the operator may want to open.
+Do not leave a bare path string when a link would do.
+Do not emit Org-mode links (`[[target][label]]` or `[[target]]`) in chat;
+they do not render as links in Markdown clients (including Emacs agent-shell).
+
+When writing files, use the file's native link syntax:
+
+- Org documents (`.org`): Org links only.
+  Do not put Markdown links inside Org files.
+- Markdown documents (`.md`): Markdown links, per the [Markdown style guide](./markdown-style-guide.md).
+
 ## Abbreviations and initialisms
 
 Agents often compress language with abbreviations and initialisms

@@ -19,8 +19,14 @@ See personal getting-started.
    - `shared/summaries/` before fetching full external standards
 2. **Personal (this host)** —
    apply because this host context is loaded:
-   - `personal/work-process.md` —
-     plan-execute + multi-session decision Q&A
+   - `personal/work-processes/`:
+     standing work procedures (top of mind).
+     Hub `README.md`;
+     `personal/work-processes/new-work.md` for plan-execute and plan Q&A;
+     other files in that directory for named processes
+     (for example ready-work batch from the org board).
+   - `personal/org.md`:
+     notes silo and digital work board (`yerk://personal/salotz-org`)
    - `personal/shell-and-bimker.md`
    - `personal/host-layout.md`
    - `personal/skills/` as relevant to the task
@@ -52,6 +58,13 @@ locate or cache a checkout of `salotz/agent-guidelines` and read from there rath
   prefer a local cache via the personal **cacher** skill (`personal/skills/cacher`) instead of repeated clones.
 - **Tools**:
   prefer task-specific tools over a generic shell when available.
+- **Chat links**:
+  sessions are read in Emacs agent-shell, which renders Markdown, not Org.
+  Use Markdown links in chat (`[label](target)` for paths, URLs, and `yerk://` ids).
+  Do not leave bare path strings when a link would do.
+  Do not emit Org links in chat.
+  Org link syntax only in Org documents.
+  See `shared/writing-for-humans.md`.
 
 ## Personal skills
 
@@ -68,8 +81,10 @@ locate or cache a checkout of `salotz/agent-guidelines` and read from there rath
   check `shared/summaries/` first.
 - Store multi-session plans under `.agents/plans` in the project when applicable.
 - Multi-session decision back-and-forth:
-  only that plan’s `decisions.md` (see `personal/work-process.md`);
+  only that plan’s `decisions.md` (see `personal/work-processes/new-work.md`);
   no all-caps `PROCESS.md` or dated `review-*.md` questionnaires.
+- Named loops (batch ready todos, and similar):
+  follow `personal/work-processes/` instead of inventing a new cadence.
 
 ## Conflicts
 
