@@ -22,7 +22,7 @@ Unless the operator explicitly asks to stage or commit:
   `core.autostage`, helpers that stage `*.dvc` after `dvc add`).
 
 Operators often keep **their** intent on the staged side and review
-**agent** work as unstaged diffs (see personal [Work Process](../../personal/work-process.md)).
+**agent** work as unstaged diffs (see personal [New work](../../personal/work-processes/new-work.md)).
 
 Draft a commit message in chat when a step is done; leave staging and
 the commit to the operator.

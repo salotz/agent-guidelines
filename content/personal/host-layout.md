@@ -29,9 +29,10 @@ This contains repos which contain generic information,
 notes,
 and other information that does not fit well into a project.
 
-The most important is typically called `org` which usually has a `notebook.org` which is a daily notebook I keep for myself to stay focused,
-make short reminders,
-work through drafts, and doing thinking.
+The most important is **org**: the personal notes silo and digital work board.
+Treat it as a standard host object.
+Details: [Org](./org.md).
+Daily notes live under that project's `notes/journal/` (not a monolithic `notebook.org`).
 
 ### Devel
 
@@ -47,3 +48,5 @@ They typically are tracked by git but may use other mechanisms for maintaining r
 
 When working in one repository I may have references to other repositories or locations on the host that I want the agent to be aware of.
 For instance I may prompt with something like "Check the other devel project X for a pattern I just used and copy it to this one."
+
+How work is collected and executed on this host: [Work processes](./work-processes/).

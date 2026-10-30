@@ -12,6 +12,8 @@ Guideline substance lives under **`content/`**:
   Operator- and host-specific guidelines (shell config, host paths, personal skills).
   Stays in this repo;
   load when that context applies (still shaped for agents on those hosts).
+  Work procedures: [work-processes/](./content/personal/work-processes/).
+  Notes / work board: [org.md](./content/personal/org.md).
 - [content/operator/](./content/operator/):
   **Human operator** guidance for designing and running host controls around agents (sandboxing, PATH layout, loud bypasses).
   Not default agent session context.

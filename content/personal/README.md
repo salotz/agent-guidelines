@@ -17,10 +17,13 @@ Load it when working on this operator's hosts or when personal context is explic
   drop-in bootloader for host-local agent context (`~/.agents/AGENTS.md`).
 - [Personal information](./personal-info.md):
   preferred username and how it shows up in codetags and plan folders.
-- [Work process](./work-process.md):
-  plan-execute chunks, commits, tests in chat,
-  multi-session plan decision Q&A (single `decisions.md` inbox),
-  and owner plan index (`todo.md` In Progress / Backlog).
+- [Work processes](./work-processes/):
+  standing procedures when host context is loaded.
+  [New work](./work-processes/new-work.md) (plan-execute, plan Q&A, owner plan index)
+  and predefined processes such as [Ready work batch](./work-processes/ready-work-batch.md).
+  Pointer at [work-process.md](./work-process.md) for old links.
+- [Org](./org.md):
+  personal notes silo and digital work board (`yerk://personal/salotz-org`).
 - [Shell Configuration and Bimker](./shell-and-bimker.md):
   bimhaw-managed shell config and the `~/.bimker` host configuration repo.
 - [Host Layout](./host-layout.md):

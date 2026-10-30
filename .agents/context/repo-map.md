@@ -22,7 +22,8 @@ Quick orientation for agents working **in this checkout**.
 ## Load order (typical)
 
 1. Root `AGENTS.md`
-2. Task-relevant tree under `content/` (`shared` default; `personal` / `operator` when applicable)
+2. Task-relevant tree under `content/` (`shared` default; `personal` / `operator` when applicable).
+   On this operator's hosts, also `content/personal/work-processes/` and `content/personal/org.md`.
 3. `contributing/development.md` when changing tooling or onboarding the clone
 4. `design/` for durable project decisions
 

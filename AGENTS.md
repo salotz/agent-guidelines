@@ -20,6 +20,8 @@ Not all of it is meant to be used for all projects and it is organized such that
 For most project work, load shared guidelines (`content/shared/`).
 Also load personal guidelines when interacting with this operator's host,
 shell configuration, or personal skills.
+When host context is loaded, [work processes](./content/personal/work-processes/) are standing procedure
+(and [org](./content/personal/org.md) is the notes / work-board project).
 When the task is designing or reproducing agent CLI sandboxing on a host, read `content/operator/`.
 
 ## This repository (control plane)

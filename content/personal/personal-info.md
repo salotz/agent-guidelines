@@ -20,4 +20,4 @@ Owner-attributed [codetags](../shared/glossary.md#codetag) use the username as a
 
 #### Plan folders
 
-`.agents/plans/salotz` as personal plan folders (see [Work process](./work-process.md)).
+`.agents/plans/salotz` as personal plan folders (see [New work](./work-processes/new-work.md)).

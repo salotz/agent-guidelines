@@ -47,8 +47,9 @@ Software topic hub: [Software](./software/).
 For Markdown dialect and formatting rules, see [Markdown style guide](./markdown-style-guide.md).
 
 For agent-to-operator chat, plans for review, plain-text-first habits,
-and **abbreviations / initialisms** (define before use; prefer full wording;
+abbreviations / initialisms (define before use; prefer full wording;
 ask before promoting short forms into a glossary),
+and chat versus file link syntax,
 see [Writing for humans](./writing-for-humans.md).
 
 For technical writing aimed at a non-personal audience, see [Technical Writing](./technical-writing.md)
@@ -152,7 +153,8 @@ tests,
 Makefiles, CI config, or other long-lived docs.
 When a choice must outlive the plan, promote it to an **ADR** under `design/decisions/` (RFC 22) and/or architecture docs, then reference those.
 Full Q&A protocol:
-personal [`work-process.md`](../personal/work-process.md) (*Plans are ephemeral*), when that personal guidance is loaded.
+personal [New work](../personal/work-processes/new-work.md) (*Plans are ephemeral*), when that personal guidance is loaded.
+Process hub: [work-processes/](../personal/work-processes/).
 
 ## Project READMEs
 

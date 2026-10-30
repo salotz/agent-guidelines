@@ -17,4 +17,4 @@ Do not duplicate it here — link out.
 
 ## Agent plans
 
-Working plans for this operator live under [`.agents/plans/`](../.agents/plans/) (ephemeral; see [work process](../content/personal/work-process.md)).
+Working plans for this operator live under [`.agents/plans/`](../.agents/plans/) (ephemeral; see [work processes](../content/personal/work-processes/)).

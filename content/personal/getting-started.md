@@ -106,7 +106,10 @@ When host context from step 1 is in session:
 1. Apply **shared** guidelines as the portable baseline.
 2. Apply **personal** guidelines for host paths,
    shell/Bimker, installs, and personal skills.
-3. Read full docs under `content/personal/` and `content/shared/` as the task requires instead of asking the operator to restate standing preferences.
+3. Treat [work processes](./work-processes/) as standing procedure:
+   read the hub, then the matching process (new work, ready-work batch, and similar).
+   Know [org](./org.md) as the notes / work-board project.
+4. Read full docs under `content/personal/` and `content/shared/` as the task requires instead of asking the operator to restate standing preferences.
 
 ## 5. Project vs host
 
@@ -123,5 +126,6 @@ plus a pointer per agent product that does not read `~/.agents/` automatically.
 ## Maintaining the template
 
 When personal guidelines change, update [agents_md_template.md](./agents_md_template.md) so new hosts get the right summary.
-Refresh `~/.agents/AGENTS.md` on each machine when the bootloader drifts.
+Refresh `~/.agents/AGENTS.md` on each machine when the bootloader drifts
+(on this operator's host that file is often a bimker-tracked copy under `~/.bimker/lib/configs/agents/`).
 Harness pointer files can stay stable if they only reference `~/.agents/AGENTS.md`.
